@@ -3,7 +3,7 @@ Projeto de front-end para o processo seletivo da Emakers Jr.
 
 # Tarefa principal:
 Seguindo o segundo modelo (InstaClone), será necessário implementar todas as telas, incluindo o modelo responsivo para dispositivos menores.
-A aplicação deverá seguir o seguinte modelo:
+A aplicação deverá seguir o seguinte modelo de telas:
 
 ![image](https://github.com/AlphaFNTZ/Front-end/assets/167240605/ef986314-5895-438f-967f-291e853c991d)
 
