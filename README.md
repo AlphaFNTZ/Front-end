@@ -5,11 +5,11 @@ Projeto de front-end para o processo seletivo da Emakers Jr.
 Seguindo o segundo modelo (InstaClone), será necessário implementar todas as telas, incluindo o modelo responsivo para dispositivos menores.
 A aplicação deverá seguir o seguinte modelo de dados:
 
-![alt text](image-1.png)
+![image](https://github.com/AlphaFNTZ/Front-end/assets/167240605/ef986314-5895-438f-967f-291e853c991d)
 
-![alt text](image-2.png)
+![image](https://github.com/AlphaFNTZ/Front-end/assets/167240605/32f1b5d0-a1d5-4029-bfae-ea11010030aa)
 
-![alt text](image-3.png)
+![image](https://github.com/AlphaFNTZ/Front-end/assets/167240605/55bcb1dc-efde-457c-bc0d-318c8af3ec57)
 
 # Requisitos do projeto:
  - Criar um repositório público no GitHub e compartilhar com a conta da Emakers no Discord.
