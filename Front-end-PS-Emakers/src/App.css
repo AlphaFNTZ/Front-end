@@ -1,42 +1,343 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Confing da tela inteira*/
+.tela_registro
+{
+  display: flex;
+  flex-direction: row;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+/* Confing da tela inteira*/
+/* Confing do bloco registro*/
+.barra
+{
+  background-color: #FE690E;
+  width: 4px;
+  height: 100vh;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.bloco_registro
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 38vw;
+  height: 100vh;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.titulo_registro
+{
+  color: #5E2075;
+  font-size: 48px;
+  font-weight: 790;
+}
+.conjunto_inputs
+{
+  display: flex;
+  flex-direction: column;
+  color: #5E2075;
+  font-size: 20px;
+  font-weight: 500;
+  width: 64%;
+  span
+  {
+    padding-left: 1.0vw;
   }
-  to {
-    transform: rotate(360deg);
+  input
+  {
+    text-indent: 20px;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #EFEFEF;
+    color: #5E2075;
+    border-style: none;
+    border-radius: 35px;
+    box-shadow: 0px 3.5px 3.5px #00000056
+  }
+  input::placeholder
+  {
+    color: #5E2075;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  input:focus
+  {
+    outline: none;
+    background-color:lightgray;
+  }
+}
+.nome,.e-mail,.senha,.conf_senha,.conjunto_perfil
+{
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+}
+.conjunto_perfil
+{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 76px;
+  color: #5E2075;
+  font-size: 20px;
+  span
+  {
+    padding-left: 1.0vw;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.div_sexo
+{
+  display: flex;
+  flex-direction: column;
+  width: 51.5%;
+  select
+  {
+    font-weight: 500;
+    appearance: none;
+    background-image: url(./imagens/img_seta.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    padding-right: 15px;
+    width: 94%;
+    height: 50px;
+    padding: 16px 20px;
+    border: none;
+    font-size: 14px;
+    background-color: #EFEFEF;
+    color: #5E2075;
+    border-style: none;
+    border-radius: 35px;
+    box-shadow: 0px 3.5px 3.5px #00000056
+  }
+  select:focus
+  {
+    background-color:lightgray;
+    border: none;
+    outline: none;
   }
 }
-
-.card {
-  padding: 2em;
+.div_imagem
+{
+  display: flex;
+  flex-direction: column;
+  width: 48.5%;
+  button
+  {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    height: 50px;
+    background-color: #EFEFEF;
+    color: #5E2075;
+    border-style: none;
+    border-radius: 35px;
+    box-shadow: 0px 3.5px 3.5px #00000056
+  }
+  button:active
+  {
+    background-color:lightgray;
+  }
 }
+.completar_acao
+{
+  color: #5E2075;
+  font-size: 20px;
+  font-weight: 500;
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button
+  {
+    width: 85%;
+    font-size: 20px;
+    height: 50px;
+    background-color: #5E2075;
+    color: #EFEFEF;
+    border-style: none;
+    border-radius: 35px;
+    box-shadow: 0px 3.5px 3.5px #00000056;
 
-.read-the-docs {
-  color: #888;
+  }
+  button:active
+  {
+    background-color:#2c0f36;
+  }
+  a
+  {
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+}
+/* Confing do bloco registro*/
+/* Confing do bloco imagem*/
+.bloco_imagem
+{
+  width: 62%;
+  height: 100vh;
+  background-image: url(./imagens/imagem_fundo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.componentes_info
+{
+  color: #FEFCFF;
+  font-size: 40px;
+  font-weight: 450;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  span
+  {
+    margin-top: 10%;
+    text-align: center;
+  }
+}
+.img_logo
+{
+  background-image: url(./imagens/img_logo.png);
+  width: 500px; /* largura da imagem */
+  height: 300px; /* altura da imagem */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* Confing do bloco imagem*/
+@media screen and (max-width: 850px)
+{
+  /* Confing da tela*/
+  .tela_registro
+  {
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+  /* Confing da tela*/
+  .barra
+  {
+    display: none;
+  }
+  /* Confing do bloco registro*/
+  .bloco_registro
+  {
+    justify-content: flex-start;
+    width: 100vw;
+    height:68%;
+  }
+  .titulo_registro
+  {
+    margin-top: 0.5vh;
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .conjunto_inputs
+  {
+    font-size: 16px;
+    font-weight: 400;
+    width: 50%;
+    span
+    {
+      padding-left: 3vw;
+    }
+    input
+    {
+      text-indent: 10px;
+      height: 30px;
+      font-size: 16px;
+    }
+    input::placeholder
+    {
+      color: transparent;
+    }
+  }
+  .nome,.e-mail,.senha,.conf_senha,.conjunto_perfil
+  {
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+  }
+  .conjunto_perfil
+  {
+    flex-direction: column;
+    width: 100%;
+    height: 76px;
+    font-size: 16px;
+    span
+    {
+      padding-left: 3vw;
+    }
+  }
+  .div_sexo
+  {
+    margin-bottom: 0.5vh;
+    width: 100%;
+    font-size: 16px;
+    select
+    {
+      font-weight: 400;
+      background-size: 12px;
+      padding-right: 5px;
+      width: 100%;
+      height: 30px;
+      padding: 0px 15px;
+      font-size: 16px;
+    }
+  }
+  .div_imagem
+  {
+    margin-top: 0.5vh;
+    width: 100%;
+    button
+    {
+      font-size: 16px;
+      font-weight: 500;
+      height: 30px;
+    }
+  }
+  .completar_acao
+  {
+    font-size: 16px;
+    font-weight: 500;
+    width: 64%;
+    margin-top: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button
+    {
+      width: 70%;
+      font-size: 20px;
+      height: 30px;
+    }
+  }
+  /* Confing do bloco registro*/
+  /* Confing do bloco imagem*/
+  .bloco_imagem
+  {
+    width: 100vw;
+    height: 32%;
+  }
+  .img_logo
+  {
+    width: 200px; /* largura da imagem */
+    height: 200px; /* altura da imagem */
+  }
+  .componentes_info
+  {
+    span
+    {
+      display: none;
+    }
+  }
+  /* Confing do bloco imagem*/
 }

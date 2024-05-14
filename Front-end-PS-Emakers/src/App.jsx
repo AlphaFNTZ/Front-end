@@ -1,10 +1,14 @@
-import { useState } from 'react'
+import "./App.css";
+import TelaRegistro from './componentes/TelaRegistro';
 
 function App() {
-
   return (
-    <p>Começar um new project</p>
+    <div className='principal'>
+      <div className='registro'>
+        <TelaRegistro/>
+      </div>
+    </div>
   )
-}
+}  
 
 export default App
