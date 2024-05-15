@@ -1,11 +1,12 @@
 import "./App.css";
-import TelaRegistro from './componentes/TelaRegistro';
+import TelaRegistro from './telas/tela_registro/TelaRegistro';
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className='principal'>
       <div className='registro'>
-        <TelaRegistro/>
+        <Outlet/>
       </div>
     </div>
   )

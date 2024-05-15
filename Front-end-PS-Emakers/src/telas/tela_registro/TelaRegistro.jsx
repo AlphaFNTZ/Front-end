@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './TelaRegistro.css'
+import { Link } from 'react-router-dom'
 
 const TelaRegistro = () => {
+
   return (
     <div className='tela_registro'>
       <div className='bloco_registro'>
@@ -34,13 +37,16 @@ const TelaRegistro = () => {
               </div>
               <div className='div_imagem'>
                 <span>Imagem</span>
-                <button>Selecionar imagem</button>
+                <label htmlFor="fileInput">
+                  <div className='selec'>Selecionar Imagem</div>
+                </label>
+                <input type="file" id="fileInput" style={{ display: 'none' }}/>
               </div>
             </div>
           </div>              
           <div className='completar_acao'>
             <button>Registrar-se</button>
-            <a href = '#' className='link'>Já possui conta?</a>
+            <Link to="/" href = '#' className='link'>Já possui conta?</Link>
           </div>
       </div>
       <div className='barra'></div>
