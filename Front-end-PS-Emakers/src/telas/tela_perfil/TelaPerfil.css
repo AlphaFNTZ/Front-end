@@ -1,0 +1,613 @@
+.tela_inteira
+{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+/* Config da parte de cima */
+.menu
+{
+    display: none;
+}
+/* Config da barra de funções */
+.pesq
+{
+    backdrop-filter: blur(3px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: rgba(17, 18, 17, 0.95);
+    background: linear-gradient(34deg, #b2693c 0%,rgba(62, 59, 57, 0.95) 80%);
+    opacity: 0;
+    pointer-events: none;
+    > svg
+    {
+        color: white;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.9rem;
+        cursor: pointer;
+    }
+    input
+    {
+        display: flex;
+        margin-top: 110px;
+        justify-content: center;
+        flex-direction: column;
+        text-indent: 20px;
+        height: 50px;
+        width: 50vw;
+        font-size: 20px;
+        background-color: #EFEFEF;
+        color: black;
+        border-style: none;
+        border-radius: 35px;
+        box-shadow: 0px 3.5px 3.5px #00000056
+    }
+    h1
+    {   
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+        margin: 0 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white
+    }
+}
+.listaDePesq
+{
+    margin-top: 20px;
+    height: 70vh;
+    width: 50vw;
+    border: 1px solid white;
+    border-radius: 35px;
+    box-shadow: 0px 3.5px 3.5px #00000056
+}
+.pesq.visivel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.amigos
+{
+    backdrop-filter: blur(3px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(17, 18, 17, 0.95);
+    background: linear-gradient(34deg, #b2693c 0%,rgba(62, 59, 57, 0.95) 80%);
+    opacity: 0;
+    pointer-events: none;
+    > svg
+    {
+        color: white;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.9rem;
+        cursor: pointer;
+    }
+    h1
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 50px;
+        width: 100%;
+        color: white;
+    }
+}
+.amigos.visivel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.perfilEdit
+{
+    backdrop-filter: blur(3px);
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(17, 18, 17, 0.95);
+    background: linear-gradient(34deg, #b2693c 0%,rgba(62, 59, 57, 0.95) 80%);
+    opacity: 0;
+    pointer-events: none;
+    > svg
+    {
+        color: white;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.9rem;
+        cursor: pointer;
+    }
+}
+.inputBio
+{
+    margin-top: 2vh;
+    height: 50vh;
+    width: 50vw;
+    font-size: 20px;
+    background-color: #EFEFEF;
+    color: black;
+    border-style: none;
+    border-radius: 35px;
+    box-shadow: 0px 3.5px 3.5px #00000056;
+    padding-top: 10px; /* Adiciona padding no topo */
+    padding-left: 20px; /* Adiciona padding na esquerda */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura totais */
+    overflow-y: auto; /* Permite rolagem vertical se necessário */
+}
+.inputNome, .inputIdade
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2vh;
+    text-indent: 20px;
+    height: 50px;
+    width: 50vw;
+    font-size: 20px;
+    background-color: #EFEFEF;
+    color: black;
+    border-style: none;
+    border-radius: 35px;
+    box-shadow: 0px 3.5px 3.5px #00000056
+}
+.perfilEdit.visivel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.editPerfil
+{
+    backdrop-filter: blur(3px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(17, 18, 17, 0.95);
+    background: linear-gradient(34deg, #b2693c 0%,rgba(62, 59, 57, 0.95) 80%);
+    opacity: 0;
+    pointer-events: none;
+    > svg
+    {
+        color: white;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.9rem;
+        cursor: pointer;
+    }
+    h1
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 50px;
+        width: 100%;
+        color: white;
+    }
+}
+.editPerfil.visivel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fotos_perfil
+{
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center; 
+    align-items: center;
+    img
+    {
+        cursor: pointer;
+        margin: 5vh 5vw;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0px 3.5px 3.5px #00000056;
+    }
+}
+
+.editCapa
+{
+    backdrop-filter: blur(3px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(17, 18, 17, 0.95);
+    background: linear-gradient(34deg, #b2693c 0%,rgba(62, 59, 57, 0.95) 80%);
+    opacity: 0;
+    pointer-events: none;
+    > svg
+    {
+        color: white;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.9rem;
+        cursor: pointer;
+    }
+    h1
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 50px;
+        width: 100%;
+        color: white;
+    }
+}
+.editCapa.visivel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Config da barra de funções */
+.parte_cima
+{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 26%;
+    background-image: url(../../imagens/img_fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.logo
+{
+  display: flex;
+  width: 50%;
+  margin: 1vh 2vw;
+  img
+  {
+    width: 250px;
+    height: 80px;
+  }
+}
+.funcoes
+{
+    width: 50%;
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-end;
+    margin: 1vh 2vw;
+}
+.lupa, .pessoas, .princ
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5vw;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.mais
+{
+    display: none;
+}
+.hamburguer
+{
+    display: none;
+}
+.funcoes svg
+{
+    font-size: 1.3em;
+}
+.foto
+{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+/* Config da parte de cima */
+/* Config da parte de baixo */
+.parte_baixo
+{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 74%;
+}
+.parte_perfil
+{
+    margin: 1vh 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.barra_1
+{
+  background-color: #FE690E;
+  width: 100vw;
+  height: 4px;
+}
+.perfil
+{
+    display: flex;
+    flex-direction: column;
+}
+.foto_perfil
+{
+    position: relative;
+    top: -120px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #FE690E;
+}
+.editar_perfil
+{
+    position: relative;
+    top: -160px;
+    left: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    box-shadow: 0px 3.5px 3.5px #00000056;
+    cursor: pointer;
+}
+.parte_escrita
+{
+    width: 60%;
+    margin: 1vh 3vw;
+    display: flex;
+    flex-direction: column;
+}
+.nome_idade
+{
+    font-weight: 50;
+    font-size: 40px;
+    margin: 2vw;
+}
+.bio_completa
+{
+    width: 60%;
+    font-weight: 50;
+    font-size: 25px;
+    margin: 0;
+}
+.editar_capa
+{
+    position: relative;
+    top: -33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5vw;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    box-shadow: 0px 3.5px 3.5px #00000056;
+    cursor: pointer;
+    margin: 0;
+}
+.parte_fotos
+{
+    display: flex;
+    flex-direction: column;
+}
+.barra_2
+{
+    align-self: center;
+    background-color: #FE690E;
+    width: 73%;
+    height: 4px;
+}
+.fotos
+{
+    display: grid;
+    overflow-y: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center; 
+    align-items: center;
+    img
+    {
+        margin: 5vh 5vw;
+        width: 300px;
+        height: 300px;
+        box-shadow: 0px 3.5px 3.5px #00000056;
+    }
+}
+/* Config da parte de baixo */
+@media screen and (max-width: 850px)
+{
+    .menu
+    {
+        backdrop-filter: blur(3px);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        left: 0;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background: rgba(17, 18, 17, 0.95);
+        background: linear-gradient(34deg, #b2693c 0%,rgba(62, 59, 57, 0.95) 80%);
+        opacity: 0;
+        pointer-events: none;
+        > svg
+        {
+            color: white;
+            position: absolute;
+            top: 1.2rem;
+            right: 1.9rem;
+        }
+        nav
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            font-weight: 50;
+            font-size: 20px;
+            color: white; 
+        }
+        h1
+        {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    .menu.visivel{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .logo
+    {
+    img
+    {
+        width: 150px;
+        height: 50px;
+    }
+    }
+    .lupa, .pessoas, .princ
+    {
+        display: none;
+    }
+    .mais
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5vw;
+        margin-top: 10px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+    }
+    .parte_perfil
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0;
+    }
+    .foto_perfil
+    {
+        position: relative;
+        top: -100px;
+        background-color: #FE690E;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+    }
+    .editar_perfil
+    {
+        top: -140px;
+        left: 140px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+    .parte_escrita
+    {
+        margin: 0 0;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        top: -120px;
+    }
+    .nome_idade
+    {
+        font-weight: 50;
+        font-size: 30px;
+    }
+    .bio_completa
+    {
+        font-weight: 50;
+        font-size: 19px;
+    }
+    .editar_capa
+    {
+        display: none;
+    }
+    .barra_2
+    {
+        position: relative;
+        top: -100px;
+        align-self: center;
+        background-color: #FE690E;
+        width: 73%;
+        height: 2px;
+    }
+    .fotos
+    {
+        position: relative;
+        top: -100px;
+        display: grid;
+        overflow-y: auto;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-items: center; 
+        align-items: center;
+        img
+        {
+            margin: 5vh 5vw;
+            width: 300px;
+            height: 300px;
+            box-shadow: 0px 3.5px 3.5px #00000056;
+        }
+    }
+}

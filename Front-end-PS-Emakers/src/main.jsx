@@ -6,18 +6,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import TelaLogin from './telas/tela_login/TelaLogin.jsx';
 import TelaRegistro from './telas/tela_registro/TelaRegistro.jsx';
 import TelaErro from './telas/tela_erro/TelaErro.jsx';
-
-/*const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <TelaLogin/>,
-  },
-  {
-    path: "registro",
-    element: <TelaRegistro/>,
-
-  },
-])*/
+import TelaPerfil from './telas/tela_perfil/TelaPerfil.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,10 +20,14 @@ const router = createBrowserRouter([
         element: <TelaLogin/>,
       },
       {
-        path: "registro",
+        path: "/registro",
         element: <TelaRegistro/>,    
       },
-    ]
+      {
+        path: "/perfil",
+        element: <TelaPerfil/>,
+      },
+    ],
   },
 ])
 

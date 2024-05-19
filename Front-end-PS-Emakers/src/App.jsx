@@ -1,15 +1,13 @@
 import "./App.css";
-import TelaRegistro from './telas/tela_registro/TelaRegistro';
+import TelaPerfil from "./telas/tela_perfil/TelaPerfil.jsx";
 import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className='principal'>
-      <div className='registro'>
-        <Outlet/>
-      </div>
+    <div className="principal">
+      <TelaPerfil />
     </div>
-  )
-}  
+  );
+}
 
-export default App
+export default App;
