@@ -1,0 +1,13 @@
+.tela_erro
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(83, 83, 83);
+}
+h1
+{
+    color: white;
+}

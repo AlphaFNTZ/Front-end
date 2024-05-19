@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./TelaErro.css";
 
 const TelaErro = () => {
   return (
-    <div>
-      <p> Erro 404! </p>
+    <div className="tela_erro">
+      <h1> Erro 404 ! </h1>
     </div>
-  )
-}
+  );
+};
 
-export default TelaErro
+export default TelaErro;

@@ -1,8 +1,8 @@
 import { React, useState } from "react";
-import Logo1 from "../../imagens/img_logo2.png";
-import Foto1 from "../../imagens/foto_1.png";
-import Foto2 from "../../imagens/foto_2.png";
-import Foto3 from "../../imagens/foto_3.png";
+import Logo1 from "../../../public/imagens/img_logo2.png";
+import Foto1 from "../../../public/imagens/foto_1.png";
+import Foto2 from "../../../public/imagens/foto_2.png";
+import Foto3 from "../../../public/imagens/foto_3.png";
 import {
   SlMagnifier,
   SlPeople,
