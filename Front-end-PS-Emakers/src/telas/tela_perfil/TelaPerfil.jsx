@@ -13,6 +13,7 @@ import {
 import "./TelaPerfil.css";
 
 function TelaPerfil() {
+  const [telaVisivel, setTelaVisivel] = useState(false);
   const [fotoPerfil, setFotoPerfil] = useState(Foto1);
   const [menuVisivel, setMenuVisivel] = useState(false);
   const [amigosVisivel, setAmigosVisivel] = useState(false);
@@ -26,6 +27,7 @@ function TelaPerfil() {
 
   const toggleMenu = () => {
     setMenuVisivel(!menuVisivel);
+    setTelaVisivel(!telaVisivel);
   };
   const toggleAmigos = () => {
     setAmigosVisivel(!amigosVisivel);
@@ -38,6 +40,7 @@ function TelaPerfil() {
   };
   const toggleEditPerfil = () => {
     setEditPerfilVisivel(!editPerfilVisivel);
+    setTelaVisivel(!telaVisivel);
   };
   const toggleEditCapa = () => {
     setEditCapaVisivel(!editCapaVisivel);
@@ -176,7 +179,10 @@ function TelaPerfil() {
             <SlPencil />
           </div>
         </div>
-        <div className="parte_fotos">
+        <div
+          className={`parte_fotos ${telaVisivel ? "visivel" : ""}`}
+          telaVisivel={telaVisivel}
+        >
           <div className="barra_2"></div>
           <div className="fotos">
             <img src={Foto1} alt="" />

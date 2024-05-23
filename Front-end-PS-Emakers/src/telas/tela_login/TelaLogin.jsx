@@ -1,42 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 import "./TelaLogin.css";
 import Logo from "../../../public/imagens/img_logo1.png";
-import { Link } from "react-router-dom";
-import { SlEye } from "react-icons/sl";
+import Input_email from "../../componentes/inputs/input_email/Input_email";
+import Input_senha from "../../componentes/inputs/input_senha/Input_senha";
+import Botao_pag from "../../componentes/botoes/botao_pag/Botao_pag";
 
 const TelaLogin = () => {
   return (
     <div className="tela_login">
-      <div className="div_logo">
-        <img src={Logo} alt="" />
-      </div>
-      <div className="bloco_login">
-        <span className="titulo_login"> Entre em sua conta </span>
-        <div className="conjunto_inputs1">
-          <div className="e-mail1">
-            <span>E-mail</span>
-            <input type="email" />
-          </div>
-          <div className="senha1">
-            <span>Senha</span>
-            <input type="password" />
-          </div>
+      <div className="lado_login">
+        <div className="div_logo">
+          <img src={Logo} />
         </div>
-        <Link to="/perfil" className="completar_acao1">
-          <span>Entrar</span>
-        </Link>
+        <div className="bloco_login">
+          <h1 className="titulo_login"> Entre em sua conta </h1>
+          <div className="conjunto_inputs1">
+            <div className="e-mail1">
+              <span>E-mail</span>
+              <Input_email />
+            </div>
+            <div className="senha1">
+              <span>Senha</span>
+              <Input_senha />
+            </div>
+          </div>
+          <Botao_pag titulo="Entrar" pagina="/perfil" estilo="pag_perfil" />
+        </div>
       </div>
       <div className="barra1"></div>
-      <div className="bloco_foto">
+      <div className="lado_foto">
         <div className="conteudo">
           <span className="titulo"> Novo aqui? </span>
           <span className="texto">
             {" "}
             Registra-se e venha fazer parte da maior rede social!{" "}
           </span>
-          <Link to="/registro" className="botao_registro">
-            <span>Registre-se</span>
-          </Link>
+          <Botao_pag
+            titulo="Registre-se"
+            pagina="/registro"
+            estilo="pag_registro"
+          />
         </div>
       </div>
     </div>

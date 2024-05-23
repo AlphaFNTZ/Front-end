@@ -1,0 +1,27 @@
+.selec {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  height: 50px;
+  color: #5e2075;
+  border-style: none;
+  border-radius: 35px;
+  box-shadow: 0px 3.5px 3.5px #00000056;
+}
+.selec:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 850px) {
+  .selec {
+    text-indent: 10px;
+    height: 40px;
+  }
+}

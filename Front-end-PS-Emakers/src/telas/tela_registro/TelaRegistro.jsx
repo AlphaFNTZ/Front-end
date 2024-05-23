@@ -1,50 +1,48 @@
 import React, { useState } from "react";
 import "./TelaRegistro.css";
 import { Link } from "react-router-dom";
+import Input_text from "../../componentes/inputs/input_text/Input_text";
+import Input_email from "../../componentes/inputs/input_email/Input_email";
+import Input_senha from "../../componentes/inputs/input_senha/Input_senha";
+import Botao_pag from "../../componentes/botoes/botao_pag/Botao_pag";
+import Select_sexo from "../../componentes/selecoes/select_sexo/Select_sexo";
+import Select_img from "../../componentes/selecoes/select_img/Select_img";
 
 const TelaRegistro = () => {
   return (
     <div className="tela_registro">
       <div className="bloco_registro">
-        <div className="titulo_registro"> Registrar </div>
+        <h1 className="titulo_registro"> Registrar </h1>
         <div className="conjunto_inputs">
           <div className="nome">
             <span>Nome</span>
-            <input type="text" />
+            <Input_text />
           </div>
           <div className="e-mail">
             <span>E-mail</span>
-            <input type="email" placeholder="exemplo@emali.com" />
+            <Input_email />
           </div>
           <div className="senha">
             <span>Senha</span>
-            <input type="password" />
+            <Input_senha />
           </div>
           <div className="conf_senha">
             <span>Confimar senha</span>
-            <input type="password" />
+            <Input_senha />
           </div>
           <div className="conjunto_perfil">
             <div className="div_sexo">
               <span>Sexo</span>
-              <select type="text">
-                <option value="0">Selecione</option>
-                <option value="1">Masculino</option>
-                <option value="2">Feminino</option>
-                <option value="3">Outros</option>
-              </select>
+              <Select_sexo />
             </div>
             <div className="div_imagem">
               <span>Imagem</span>
-              <label htmlFor="fileInput">
-                <div className="selec">Selecionar Imagem</div>
-              </label>
-              <input type="file" id="fileInput" style={{ display: "none" }} />
+              <Select_img />
             </div>
           </div>
         </div>
         <div className="completar_acao">
-          <button>Registrar-se</button>
+          <Botao_pag titulo="Registre-se" pagina="/perfil" estilo="pag_login" />
           <Link to="/" href="#" className="link">
             Já possui conta?
           </Link>
