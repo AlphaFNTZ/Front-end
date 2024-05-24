@@ -24,6 +24,7 @@ select:focus {
 }
 select:hover {
   background-color: #e0e0e0;
+  transition: 1s;
   transform: scale(1.05);
 }
 

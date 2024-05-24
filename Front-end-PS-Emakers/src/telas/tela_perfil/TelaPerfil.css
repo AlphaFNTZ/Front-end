@@ -303,34 +303,17 @@
   display: flex;
   align-self: flex-start;
   justify-content: flex-end;
-  margin: 1vh 2vw;
-}
-.lupa,
-.pessoas,
-.princ {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5vw;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background-color: aliceblue;
-  cursor: pointer;
+  margin: 2vh 2vw;
+  gap: 1vw;
 }
 .mais {
   display: none;
-}
-.hamburguer {
-  display: none;
-}
-.funcoes svg {
-  font-size: 1.3em;
 }
 .foto {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  cursor: pointer;
 }
 /* Config da parte de cima */
 /* Config da parte de baixo */
@@ -345,11 +328,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.barra_1 {
-  background-color: #fe690e;
-  width: 100vw;
-  height: 4px;
 }
 .perfil {
   display: flex;
@@ -367,15 +345,10 @@
   position: relative;
   top: -160px;
   left: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: aliceblue;
   box-shadow: 0px 3.5px 3.5px #00000056;
-  cursor: pointer;
 }
 .parte_escrita {
   width: 60%;
@@ -399,17 +372,10 @@
 .editar_capa {
   position: relative;
   top: -33px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5vw;
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: aliceblue;
   box-shadow: 0px 3.5px 3.5px #00000056;
-  cursor: pointer;
-  margin: 0;
 }
 .parte_fotos {
   display: flex;
@@ -418,11 +384,12 @@
 .parte_fotos.visivel {
   display: none;
 }
-.barra_2 {
+.barra_foto {
+  display: flex;
   align-self: center;
   background-color: #fe690e;
-  width: 73%;
-  height: 4px;
+  width: 90%;
+  height: auto;
 }
 .fotos {
   display: grid;
@@ -444,50 +411,26 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
     z-index: 5;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     background: rgba(17, 18, 17, 0.95);
     background: linear-gradient(34deg, #b2693c 0%, rgba(62, 59, 57, 0.95) 80%);
     opacity: 0;
     transition: opacity 300ms;
     pointer-events: none;
-    > svg {
-      color: white;
+    .voltar {
       position: absolute;
-      top: 1.2rem;
-      right: 1.9rem;
-    }
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 2rem;
-      font-weight: 50;
-      font-size: 15px;
-      color: white;
-    }
-    h1 {
-      text-decoration: none;
-      color: white;
+      top: 1rem;
+      right: 1rem;
     }
   }
   .menu.visivel {
     opacity: 1;
     transition: opacity 300ms;
     pointer-events: auto;
-    .tela_inteira {
-      display: none;
-    }
   }
-
   .pesq {
     input {
       width: 70vw;
@@ -564,16 +507,10 @@
     display: none;
   }
   .mais {
+    width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5vw;
-    margin-top: 10px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    color: white;
-    cursor: pointer;
+    align-self: flex-start;
+    justify-content: flex-end;
   }
   .parte_perfil {
     display: flex;
@@ -614,13 +551,12 @@
   .editar_capa {
     display: none;
   }
-  .barra_2 {
+  .barra_foto {
     position: relative;
     top: -100px;
-    align-self: center;
     background-color: #fe690e;
-    width: 73%;
-    height: 2px;
+    width: 90%;
+    height: auto;
   }
   .fotos {
     position: relative;

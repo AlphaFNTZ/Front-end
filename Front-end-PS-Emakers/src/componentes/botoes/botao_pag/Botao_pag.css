@@ -20,7 +20,8 @@
     font-size: 20px;
   }
   button:hover {
-    background-color: #2c0f36;
+    background-color: #421751;
+    transition: 0.5s;
     transform: scale(1.05);
   }
 }
@@ -46,6 +47,7 @@
   }
   button:hover {
     background-color: #ae490a;
+    transition: 0.5s;
     transform: scale(1.05);
   }
 }
@@ -71,7 +73,8 @@
     font-size: 20px;
   }
   button:hover {
-    background-color: #2c0f36;
+    background-color: #421751;
+    transition: 0.5s;
     transform: scale(1.05);
   }
 }

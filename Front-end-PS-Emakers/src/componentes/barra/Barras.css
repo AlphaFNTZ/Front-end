@@ -1,0 +1,21 @@
+.normal {
+  background-color: #fe690e;
+  width: 4px;
+  height: 100vh;
+}
+.inverso {
+  background-color: #fe690e;
+  width: 100vw;
+  height: 4px;
+}
+@media screen and (max-width: 850px) {
+  .normal {
+    width: 100vw;
+    height: 4px;
+  }
+  .inverso {
+    background-color: #fe690e;
+    width: 100vw;
+    height: 4px;
+  }
+}

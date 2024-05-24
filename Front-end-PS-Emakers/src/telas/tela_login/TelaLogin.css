@@ -5,11 +5,6 @@
 }
 /* Confing da tela inteira*/
 /* Confing do bloco registro*/
-.barra1 {
-  background-color: #fe690e;
-  width: 4px;
-  height: 100vh;
-}
 .lado_login {
   display: flex;
   flex-direction: column;
@@ -95,11 +90,6 @@
   .tela_login {
     flex-direction: column;
     height: 100vh;
-  }
-  /* Confing da tela*/
-  .barra1 {
-    width: 100vw;
-    height: 4px;
   }
   /* Confing do bloco registro*/
   .lado_login {

@@ -3,6 +3,10 @@ import Logo1 from "../../../public/imagens/img_logo2.png";
 import Foto1 from "../../../public/imagens/foto_1.png";
 import Foto2 from "../../../public/imagens/foto_2.png";
 import Foto3 from "../../../public/imagens/foto_3.png";
+import Botao from "../../componentes/botoes/botao/Botao";
+import Menu_componente from "../../componentes/menus/menu/Menu";
+import Barra from "../../componentes/barra/Barras";
+
 import {
   SlMagnifier,
   SlPeople,
@@ -55,18 +59,10 @@ function TelaPerfil() {
         className={`menu ${menuVisivel ? "visivel" : ""}`}
         menuVisivel={menuVisivel}
       >
-        <SlArrowUp size={25} onClick={toggleMenu} />
-        <nav>
-          <a href="#" style={{ textDecoration: "none" }} onClick={togglePesq}>
-            <h1>Pesquisar</h1>
-          </a>
-          <a href="#" style={{ textDecoration: "none" }} onClick={toggleAmigos}>
-            <h1>Amigos</h1>
-          </a>
-          <a href="#" style={{ textDecoration: "none" }} onClick={togglePerfil}>
-            <h1>Perfil</h1>
-          </a>
-        </nav>
+        <div className="voltar" onClick={toggleMenu}>
+          <Botao tipo="tipo_voltar" />
+        </div>
+        <Menu_componente />
       </div>
 
       <div
@@ -147,26 +143,26 @@ function TelaPerfil() {
         </div>
         <div className="funcoes">
           <div className="lupa" onClick={togglePesq}>
-            <SlMagnifier />
+            <Botao tipo="tipo_lupa" />
           </div>
           <div className="pessoas" onClick={toggleAmigos}>
-            <SlPeople />
+            <Botao tipo="tipo_pessoas" />
           </div>
           <div className="princ">
             <img className="foto" src={fotoPerfil} onClick={togglePerfil} />
           </div>
           <div className="mais" onClick={toggleMenu}>
-            <SlMenu />
+            <Botao tipo="tipo_mais" />
           </div>
         </div>
       </div>
-      <div className="barra_1"></div>
+      <Barra local="inverso" />
       <div className="parte_baixo">
         <div className="parte_perfil">
           <div className="perfil">
             <img className="foto_perfil" src={fotoPerfil} alt="" />
             <div className="editar_perfil" onClick={toggleEditPerfil}>
-              <SlPencil />
+              <Botao tipo="tipo_edit" />
             </div>
           </div>
           <div className="parte_escrita">
@@ -176,14 +172,16 @@ function TelaPerfil() {
             <h2 className="bio_completa">{bio}</h2>
           </div>
           <div className="editar_capa" onClick={toggleEditCapa}>
-            <SlPencil />
+            <Botao tipo="tipo_edit" />
           </div>
         </div>
         <div
           className={`parte_fotos ${telaVisivel ? "visivel" : ""}`}
           telaVisivel={telaVisivel}
         >
-          <div className="barra_2"></div>
+          <div className="barra_foto">
+            <Barra local="inverso" />
+          </div>
           <div className="fotos">
             <img src={Foto1} alt="" />
             <img src={Foto2} alt="" />

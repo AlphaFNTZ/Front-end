@@ -4,6 +4,7 @@ import Logo from "../../../public/imagens/img_logo1.png";
 import Input_email from "../../componentes/inputs/input_email/Input_email";
 import Input_senha from "../../componentes/inputs/input_senha/Input_senha";
 import Botao_pag from "../../componentes/botoes/botao_pag/Botao_pag";
+import Barra from "../../componentes/barra/Barras";
 
 const TelaLogin = () => {
   return (
@@ -27,7 +28,7 @@ const TelaLogin = () => {
           <Botao_pag titulo="Entrar" pagina="/perfil" estilo="pag_perfil" />
         </div>
       </div>
-      <div className="barra1"></div>
+      <Barra local="normal" />
       <div className="lado_foto">
         <div className="conteudo">
           <span className="titulo"> Novo aqui? </span>

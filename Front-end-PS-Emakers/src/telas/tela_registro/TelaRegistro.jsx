@@ -7,6 +7,7 @@ import Input_senha from "../../componentes/inputs/input_senha/Input_senha";
 import Botao_pag from "../../componentes/botoes/botao_pag/Botao_pag";
 import Select_sexo from "../../componentes/selecoes/select_sexo/Select_sexo";
 import Select_img from "../../componentes/selecoes/select_img/Select_img";
+import Barra from "../../componentes/barra/Barras";
 
 const TelaRegistro = () => {
   return (
@@ -48,7 +49,7 @@ const TelaRegistro = () => {
           </Link>
         </div>
       </div>
-      <div className="barra"></div>
+      <Barra local="normal" />
       <div className="bloco_imagem">
         <div className="componentes_info">
           <div className="img_logo"></div>

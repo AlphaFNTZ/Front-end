@@ -35,6 +35,7 @@
 }
 .input_text:hover {
   background-color: #e0e0e0;
+  transition: 0.5s;
   transform: scale(1.05);
 }
 
