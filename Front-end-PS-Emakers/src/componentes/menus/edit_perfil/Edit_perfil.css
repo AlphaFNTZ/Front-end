@@ -1,0 +1,31 @@
+.fotos_perfil {
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	justify-items: center;
+	align-items: center;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	img {
+		cursor: pointer;
+		margin: 5vh 5vw;
+		width: 200px;
+		height: 200px;
+		box-shadow: 0px 3.5px 3.5px #00000056;
+		transition: 0.5s;
+		transform: scale(1);
+	}
+	img:hover {
+		transition: 0.5s;
+		transform: scale(1.05);
+	}
+}
+@media screen and (max-width: 900px) {
+	.fotos_perfil {
+		img {
+			margin: 2vh 2vw;
+			width: 25vw;
+			height: 200px;
+		}
+	}
+}

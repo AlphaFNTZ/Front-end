@@ -1,104 +1,115 @@
 .pag_perfil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 40%;
-  button {
-    background-color: #5e2075;
-    font-size: 20px;
-    font-weight: 500;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    border-style: none;
-    border-radius: 35px;
-    box-shadow: 0px 3.5px 3.5px #00000056;
-  }
-  h1 {
-    text-align: center;
-    font-size: 20px;
-  }
-  button:hover {
-    background-color: #421751;
-    transition: 0.5s;
-    transform: scale(1.05);
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 40%;
+	button {
+		background-color: #5e2075;
+		font-size: 20px;
+		font-weight: 500;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		border-style: none;
+		border-radius: 35px;
+		box-shadow: 0px 3.5px 3.5px #00000056;
+		transition: 0.5s;
+		transform: scale(1);
+	}
+	h1 {
+		text-align: center;
+		font-size: 20px;
+		margin: 0;
+	}
+	button:hover {
+		background-color: #421751;
+		transition: 0.5s;
+		transform: scale(1.05);
+	}
 }
 .pag_registro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 70%;
-  button {
-    background-color: #fe690e;
-    font-size: 20px;
-    font-weight: 500;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    border-style: none;
-    border-radius: 35px;
-    box-shadow: 0px 3.5px 3.5px #00000056;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  button:hover {
-    background-color: #ae490a;
-    transition: 0.5s;
-    transform: scale(1.05);
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 70%;
+	button {
+		background-color: #fe690e;
+		font-size: 20px;
+		font-weight: 500;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		border-style: none;
+		border-radius: 35px;
+		box-shadow: 0px 3.5px 3.5px #00000056;
+		transition: 0.5s;
+		transform: scale(1);
+	}
+	h1 {
+		text-align: center;
+		font-size: 20px;
+		margin: 0;
+	}
+	button:hover {
+		background-color: #ae490a;
+		transition: 0.5s;
+		transform: scale(1.05);
+	}
 }
 
 .pag_login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 70%;
-  button {
-    background-color: #5e2075;
-    font-size: 20px;
-    font-weight: 500;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    border-style: none;
-    border-radius: 35px;
-    box-shadow: 0px 3.5px 3.5px #00000056;
-  }
-  h1 {
-    font-size: 20px;
-  }
-  button:hover {
-    background-color: #421751;
-    transition: 0.5s;
-    transform: scale(1.05);
-  }
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 70%;
+	button {
+		background-color: #5e2075;
+		font-size: 20px;
+		font-weight: 500;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		border-style: none;
+		border-radius: 35px;
+		box-shadow: 0px 3.5px 3.5px #00000056;
+		transition: 0.5s;
+		transform: scale(1);
+	}
+	h1 {
+		text-align: center;
+		font-size: 20px;
+		margin: 0;
+	}
+	button:hover {
+		background-color: #421751;
+		transition: 0.5s;
+		transform: scale(1.05);
+	}
 }
 
 @media screen and (max-width: 850px) {
-  .pag_perfil {
-    text-indent: 10px;
-    height: 40px;
-    h1 {
-      font-size: 16px;
-    }
-  }
-  .pag_registro {
-    text-indent: 10px;
-    height: 40px;
-    h1 {
-      font-size: 16px;
-    }
-  }
-  .pag_login {
-    text-indent: 10px;
-    height: 40px;
-    h1 {
-      font-size: 16px;
-    }
-  }
+	.pag_perfil {
+		text-indent: 10px;
+		height: 40px;
+		h1 {
+			font-size: 16px;
+		}
+	}
+	.pag_registro {
+		text-indent: 10px;
+		height: 40px;
+		h1 {
+			font-size: 16px;
+		}
+	}
+	.pag_login {
+		text-indent: 10px;
+		height: 40px;
+		h1 {
+			font-size: 16px;
+		}
+	}
 }

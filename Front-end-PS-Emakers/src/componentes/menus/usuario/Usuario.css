@@ -1,0 +1,74 @@
+.conteudo_usuario {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	height: 100%;
+}
+.inputBio {
+	margin-top: 2vh;
+	height: 50vh;
+	width: 100%;
+	font-size: 20px;
+	background-color: rgb(240, 239, 235);
+	color: rgb(41, 41, 41);
+	border-style: none;
+	border-radius: 35px;
+	box-shadow: 0px 3.5px 3.5px #00000056;
+	padding: 20px 20px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	resize: none;
+}
+.inputBio::placeholder {
+	color: rgb(41, 41, 41);
+}
+.inputNome,
+.inputIdade {
+	margin-top: 2vh;
+	text-indent: 20px;
+	height: 50px;
+	width: 100%;
+	font-size: 20px;
+	background-color: rgb(240, 239, 235);
+	color: rgb(41, 41, 41);
+	border-style: none;
+	border-radius: 35px;
+	box-shadow: 0px 3.5px 3.5px #00000056;
+	padding: 0;
+}
+.inputNome::placeholder,
+.inputIdade::placeholder {
+	color: rgb(41, 41, 41);
+}
+@media screen and (max-width: 900px) {
+	.inputBio {
+		margin-top: 2vh;
+		height: 50vh;
+		width: 100%;
+		font-size: 20px;
+		border-style: none;
+		border-radius: 35px;
+		box-shadow: 0px 3.5px 3.5px #00000056;
+		padding-top: 10px;
+		padding-left: 20px;
+		box-sizing: border-box;
+		overflow-y: auto;
+	}
+	.inputNome,
+	.inputIdade {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-top: 2vh;
+		text-indent: 20px;
+		height: 50px;
+		width: 100%;
+		font-size: 20px;
+		border-style: none;
+		border-radius: 35px;
+		box-shadow: 0px 3.5px 3.5px #00000056;
+	}
+}
