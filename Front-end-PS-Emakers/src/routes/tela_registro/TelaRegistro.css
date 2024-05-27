@@ -71,7 +71,7 @@
 .bloco_imagem {
 	width: 62vw;
 	height: 100vh;
-	background-image: url(../../../public/imagens/imagem_fundo.png);
+	background-image: url(../../../public/images/imagem_fundo.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	display: flex;
@@ -94,7 +94,7 @@
 	}
 }
 .img_logo {
-	background-image: url(../../../public/imagens/img_logo.png);
+	background-image: url(../../../public/images/img_logo.png);
 	width: 500px; /* largura da imagem */
 	height: 300px; /* altura da imagem */
 	background-position: center;

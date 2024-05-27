@@ -1,5 +1,4 @@
 .tipo_perfil {
-	display: flex;
 	.botao_perfil {
 		width: 36px;
 		height: 36px;
@@ -27,7 +26,6 @@
 	}
 }
 .tipo_pessoas {
-	display: flex;
 	.botao_pessoas {
 		display: flex;
 		justify-content: center;
@@ -58,7 +56,6 @@
 	}
 }
 .tipo_lupa {
-	display: flex;
 	.botao_lupa {
 		display: flex;
 		justify-content: center;
@@ -89,7 +86,6 @@
 	}
 }
 .tipo_edit {
-	display: flex;
 	.botao_edit {
 		display: flex;
 		justify-content: center;
@@ -120,7 +116,6 @@
 	}
 }
 .tipo_mais {
-	display: flex;
 	.botao_mais {
 		display: flex;
 		justify-content: center;
@@ -151,7 +146,6 @@
 	}
 }
 .tipo_voltar {
-	display: flex;
 	.botao_voltar {
 		display: flex;
 		justify-content: center;

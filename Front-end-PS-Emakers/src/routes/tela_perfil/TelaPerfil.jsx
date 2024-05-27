@@ -1,24 +1,24 @@
 import "./TelaPerfil.css";
 import { React, useState } from "react";
 /* Fotos */
-import Foto_perfil from "../../../public/imagens/img_perfil.png";
-import Logo1 from "../../../public/imagens/img_logo2.png";
-import Foto1 from "../../../public/imagens/foto_1.png";
-import Foto2 from "../../../public/imagens/foto_2.png";
-import Foto3 from "../../../public/imagens/foto_3.png";
-import Foto4 from "../../../public/imagens/foto_4.png";
-import Foto5 from "../../../public/imagens/foto_5.png";
-import Foto6 from "../../../public/imagens/foto_6.png";
-import Foto7 from "../../../public/imagens/foto_7.png";
-import Foto8 from "../../../public/imagens/foto_8.png";
-import Foto9 from "../../../public/imagens/foto_9.png";
-import Foto10 from "../../../public/imagens/foto_10.png";
+import Foto_perfil from "../../../public/images/img_perfil.png";
+import Logo1 from "../../../public/images/img_logo2.png";
+import Foto1 from "../../../public/images/foto_1.png";
+import Foto2 from "../../../public/images/foto_2.png";
+import Foto3 from "../../../public/images/foto_3.png";
+import Foto4 from "../../../public/images/foto_4.png";
+import Foto5 from "../../../public/images/foto_5.png";
+import Foto6 from "../../../public/images/foto_6.png";
+import Foto7 from "../../../public/images/foto_7.png";
+import Foto8 from "../../../public/images/foto_8.png";
+import Foto9 from "../../../public/images/foto_9.png";
+import Foto10 from "../../../public/images/foto_10.png";
 /* Fotos */
 /* Componentes */
-import Botao from "../../componentes/botoes/botao/Botao";
-import Barra from "../../componentes/barra/Barras";
-import Menu_base from "../../componentes/menus/menu_base/Menu_base";
-import Fundo_foto from "../../componentes/fundo_foto/Fundo_foto";
+import Botao from "../../components/botoes/botao/Botao";
+import Barra from "../../components/barra/Barras";
+import Menu_base from "../../components/menus/menu_base/Menu_base";
+import Fundo_foto from "../../components/fundo_foto/Fundo_foto";
 /* Componentes */
 
 function TelaPerfil() {

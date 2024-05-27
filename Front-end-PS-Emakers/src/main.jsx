@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import TelaLogin from "./telas/tela_login/TelaLogin.jsx";
-import TelaRegistro from "./telas/tela_registro/TelaRegistro.jsx";
-import TelaErro from "./telas/tela_erro/TelaErro.jsx";
-import TelaPerfil from "./telas/tela_perfil/TelaPerfil.jsx";
+import TelaLogin from "./routes/tela_login/TelaLogin.jsx";
+import TelaRegistro from "./routes/tela_registro/TelaRegistro.jsx";
+import TelaErro from "./routes/tela_erro/TelaErro.jsx";
+import TelaPerfil from "./routes/tela_perfil/TelaPerfil.jsx";
 
 const router = createBrowserRouter([
 	{

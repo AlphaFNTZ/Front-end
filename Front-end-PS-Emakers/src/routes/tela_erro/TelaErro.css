@@ -1,0 +1,15 @@
+.tela_erro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(217, 217, 217);
+}
+img {
+	height: 300px;
+}
+h1 {
+	color: rgb(41, 41, 41);
+}

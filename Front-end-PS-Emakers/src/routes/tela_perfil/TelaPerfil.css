@@ -9,7 +9,6 @@
 	overflow-x: hidden; /* Desabilita a rolagem horizontal */
 	scrollbar-width: none;
 }
-
 /* Config da parte de cima */
 /* Config da barra de funções */
 .parte_cima {
@@ -17,7 +16,7 @@
 	flex-direction: row;
 	width: 100vw;
 	height: 26%;
-	background-image: url(../../../public/imagens/img_fundo.png);
+	background-image: url(../../../public/images/img_fundo.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -94,6 +93,7 @@
 	color: rgb(41, 41, 41);
 	align-items: flex-start;
 	margin: 0;
+	word-break: break-word;
 }
 .bio_completa {
 	width: 70%;
@@ -102,6 +102,7 @@
 	margin: 0;
 	padding: 10px;
 	color: rgb(41, 41, 41);
+	word-break: break-word;
 }
 .editar_capa {
 	position: relative;
@@ -153,30 +154,37 @@
 	.parte_perfil {
 		display: flex;
 		flex-direction: column;
+		background-color: transparent;
+		box-shadow: none;
 		align-items: center;
 		margin: 0 0;
+	}
+	.perfil {
+		align-items: center;
+		width: 100vw;
+		background-color: rgb(240, 239, 235);
 	}
 	.foto_perfil {
 		position: relative;
 		top: -100px;
 		width: 180px;
 		height: 180px;
-		border-radius: 50%;
 	}
 	.editar_perfil {
 		top: -140px;
-		left: 140px;
-		width: 25px;
-		height: 25px;
-		border-radius: 50%;
+		left: 60px;
 	}
 	.parte_escrita {
-		width: 70%;
+		width: 100vw;
 		margin: 0 0;
+		padding-bottom: 50px;
 		align-items: center;
 		text-align: center;
 		position: relative;
 		top: -120px;
+		background-color: rgb(240, 239, 235);
+		border-radius: 10px;
+		box-shadow: 0px 3.5px 3.5px #0000002d;
 	}
 	.nome_idade {
 		font-weight: 50;
