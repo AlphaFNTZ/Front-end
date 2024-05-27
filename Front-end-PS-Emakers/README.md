@@ -2,7 +2,7 @@
 
 Esse é o meu projeto de front-end para o processo seletivo da Emakers JR.
 
-Nesse projeto, usei React mais o Vite em linguagem JavaScript e CSS para criar uma versão do Instagram, o "Insta Clone". A ideia era fazer todas as telas do app e garantir que tudo funcionasse bem em qualquer tamanho de tela, desde celulares até computadores.
+Nesse projeto, usei React em linguagem JavaScript e CSS para criar uma versão do Instagram, o "Insta Clone". A ideia era fazer todas as telas do app e garantir que tudo funcionasse bem em qualquer tamanho de tela, desde celulares até computadores.
 
 # Pontos importantes
 
@@ -18,8 +18,8 @@ Nesse projeto, usei React mais o Vite em linguagem JavaScript e CSS para criar u
 - Navegação Entre Páginas:
   A navegação entre páginas foi feita com React Router, então você pode facilmente mover-se entre as diferentes seções do app clicando em botões e links.
 
-Bom, espero de coração que tenham gostado deste meu projeto. Ele foi planejado e executado com muita dedicação e carinho.
+# Considerações
 
-Agradeço pela grande oportunidade que vocês me proporcionaram.
+Bom, espero de coração que tenham gostado deste meu projeto. Ele foi planejado e executado com muita dedicação e carinho. Agradeço pela grande oportunidade que vocês me proporcionaram.
 
 Atenciosamente, do seu criador, Juliano Cesar.
