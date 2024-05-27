@@ -9,29 +9,29 @@ import TelaErro from "./telas/tela_erro/TelaErro.jsx";
 import TelaPerfil from "./telas/tela_perfil/TelaPerfil.jsx";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <TelaErro />,
-    children: [
-      {
-        path: "/",
-        element: <TelaLogin />,
-      },
-      {
-        path: "/registro",
-        element: <TelaRegistro />,
-      },
-      {
-        path: "/perfil",
-        element: <TelaPerfil />,
-      },
-    ],
-  },
+	{
+		path: "/",
+		element: <App />,
+		errorElement: <TelaErro />,
+		children: [
+			{
+				path: "/",
+				element: <TelaLogin />,
+			},
+			{
+				path: "/registro",
+				element: <TelaRegistro />,
+			},
+			{
+				path: "/perfil",
+				element: <TelaPerfil />,
+			},
+		],
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
 );

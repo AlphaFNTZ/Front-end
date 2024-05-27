@@ -42,12 +42,6 @@
 .mais {
 	display: none;
 }
-.foto {
-	width: 36px;
-	height: 36px;
-	border-radius: 50%;
-	cursor: pointer;
-}
 /* Config da parte de cima */
 /* Config da parte de baixo */
 .parte_baixo {
@@ -57,10 +51,13 @@
 	height: 74%;
 }
 .parte_perfil {
-	margin: 1vh 0;
+	/*margin: 1vh 0;*/
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
+	/* Teste */
+	background-color: rgb(240, 239, 235);
+	border-radius: 10px;
+	box-shadow: 0px 3.5px 3.5px #0000002d;
 }
 .perfil {
 	display: flex;
@@ -72,7 +69,8 @@
 	width: 250px;
 	height: 250px;
 	border-radius: 50%;
-	border: 2px solid rgb(255, 109, 0);
+	background-color: rgb(217, 217, 217);
+	box-shadow: 0px 3.5px 3.5px #00000056;
 }
 .editar_perfil {
 	position: relative;
@@ -88,6 +86,7 @@
 	margin: 1vh 3vw;
 	display: flex;
 	flex-direction: column;
+	gap: 10px;
 }
 .nome_idade {
 	font-weight: 400;
@@ -95,7 +94,6 @@
 	color: rgb(41, 41, 41);
 	align-items: flex-start;
 	margin: 0;
-	margin-bottom: 2vh;
 }
 .bio_completa {
 	width: 70%;
@@ -107,7 +105,7 @@
 }
 .editar_capa {
 	position: relative;
-	top: -33px;
+	top: -25px;
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
@@ -173,6 +171,7 @@
 		border-radius: 50%;
 	}
 	.parte_escrita {
+		width: 70%;
 		margin: 0 0;
 		align-items: center;
 		text-align: center;
@@ -181,11 +180,11 @@
 	}
 	.nome_idade {
 		font-weight: 50;
-		font-size: 30px;
+		font-size: 35px;
 	}
 	.bio_completa {
 		font-weight: 50;
-		font-size: 19px;
+		font-size: 20px;
 	}
 	.editar_capa {
 		display: none;

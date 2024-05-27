@@ -1,6 +1,7 @@
 import "./TelaPerfil.css";
 import { React, useState } from "react";
 /* Fotos */
+import Foto_perfil from "../../../public/imagens/img_perfil.png";
 import Logo1 from "../../../public/imagens/img_logo2.png";
 import Foto1 from "../../../public/imagens/foto_1.png";
 import Foto2 from "../../../public/imagens/foto_2.png";
@@ -21,7 +22,7 @@ import Fundo_foto from "../../componentes/fundo_foto/Fundo_foto";
 /* Componentes */
 
 function TelaPerfil() {
-	/* For para fotos*/
+	/* Um "for" para fotos*/
 	const fotos = [
 		{ foto: Foto1, onClick: () => mudarFotoPerfil(Foto1) },
 		{ foto: Foto2, onClick: () => mudarFotoPerfil(Foto2) },
@@ -34,10 +35,10 @@ function TelaPerfil() {
 		{ foto: Foto9, onClick: () => mudarFotoPerfil(Foto9) },
 		{ foto: Foto10, onClick: () => mudarFotoPerfil(Foto10) },
 	];
-	/* For para fotos*/
+	/* Um "for" para fotos*/
 	/* Variaveis e funções */
 	const [telaVisivel, setTelaVisivel] = useState(false);
-	const [fotoPerfil, setFotoPerfil] = useState(Foto1);
+	const [fotoPerfil, setFotoPerfil] = useState(Foto_perfil);
 	const [menuVisivel, setMenuVisivel] = useState(false);
 	const [amigosVisivel, setAmigosVisivel] = useState(false);
 	const [perfilVisivel, setPerfilVisivel] = useState(false);
@@ -73,7 +74,6 @@ function TelaPerfil() {
 	return (
 		<div className="tela_inteira">
 			{/* As telas dos menus */}
-			{/**/}
 			<Menu_base
 				tipo="menu"
 				funcao={menuVisivel}
@@ -115,12 +115,8 @@ function TelaPerfil() {
 					<div className="pessoas" onClick={toggleAmigos}>
 						<Botao tipo="tipo_pessoas" />
 					</div>
-					<div className="princ">
-						<img
-							className="foto"
-							src={fotoPerfil}
-							onClick={toggleEditUsuario}
-						/>
+					<div className="princ" onClick={toggleEditUsuario}>
+						<Botao tipo="tipo_perfil" foto={fotoPerfil} />
 					</div>
 					<div className="mais" onClick={toggleMenu}>
 						<Botao tipo="tipo_mais" />
@@ -149,9 +145,7 @@ function TelaPerfil() {
 				<div
 					className={`parte_fotos ${telaVisivel ? "visivel" : ""}`}
 					telaVisivel={telaVisivel}>
-					<div className="barra_foto">
-						<Barra local="inverso" />
-					</div>
+					<div className="barra_foto">{/*<Barra local="inverso" />*/}</div>
 					<div className="fotos">
 						{fotos.map((item, index) => (
 							<Fundo_foto key={index} foto={item.foto} />

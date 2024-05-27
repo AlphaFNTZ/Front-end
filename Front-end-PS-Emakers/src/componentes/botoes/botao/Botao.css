@@ -1,3 +1,31 @@
+.tipo_perfil {
+	display: flex;
+	.botao_perfil {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background-color: rgb(240, 239, 235);
+		img {
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: 0.1s;
+			transform: scale(1);
+		}
+		img:active {
+			transition: 0.1s;
+			transform: scale(0.8);
+		}
+	}
+	.botao_pessoas,
+	.botao_lupa,
+	.botao_edit,
+	.botao_mais,
+	.botao_voltar {
+		display: none;
+	}
+}
 .tipo_pessoas {
 	display: flex;
 	.botao_pessoas {
@@ -10,11 +38,18 @@
 		border-style: none;
 		background-color: rgb(240, 239, 235);
 		cursor: pointer;
+		transition: 0.1s;
+		transform: scale(1);
 		> svg {
 			font-size: 1.5em;
 			color: rgb(41, 41, 41);
 		}
 	}
+	.botao_pessoas:active {
+		transition: 0.1s;
+		transform: scale(0.8);
+	}
+	.botao_perfil,
 	.botao_lupa,
 	.botao_edit,
 	.botao_mais,
@@ -34,11 +69,18 @@
 		border-style: none;
 		background-color: rgb(240, 239, 235);
 		cursor: pointer;
+		transition: 0.1s;
+		transform: scale(1);
 		> svg {
 			font-size: 1.5em;
 			color: rgb(41, 41, 41);
 		}
 	}
+	.botao_lupa:active {
+		transition: 0.1s;
+		transform: scale(0.8);
+	}
+	.botao_perfil,
 	.botao_pessoas,
 	.botao_edit,
 	.botao_mais,
@@ -58,11 +100,18 @@
 		border-style: none;
 		background-color: rgb(240, 239, 235);
 		cursor: pointer;
+		transition: 0.1s;
+		transform: scale(1);
 		> svg {
 			font-size: 1.5em;
 			color: rgb(41, 41, 41);
 		}
 	}
+	.botao_edit:active {
+		transition: 0.1s;
+		transform: scale(0.8);
+	}
+	.botao_perfil,
 	.botao_lupa,
 	.botao_pessoas,
 	.botao_mais,
@@ -82,11 +131,18 @@
 		border-style: none;
 		background-color: rgb(240, 239, 235);
 		cursor: pointer;
+		transition: 0.1s;
+		transform: scale(1);
 		> svg {
 			font-size: 1.5em;
 			color: rgb(41, 41, 41);
 		}
 	}
+	.botao_mais:active {
+		transition: 0.1s;
+		transform: scale(0.8);
+	}
+	.botao_perfil,
 	.botao_lupa,
 	.botao_pessoas,
 	.botao_edit,
@@ -106,11 +162,18 @@
 		border-style: none;
 		background-color: rgb(240, 239, 235);
 		cursor: pointer;
+		transition: 0.1s;
+		transform: scale(1);
 		> svg {
 			font-size: 1.5em;
 			color: rgb(41, 41, 41);
 		}
 	}
+	.botao_voltar:active {
+		transition: 0.1s;
+		transform: scale(0.8);
+	}
+	.botao_perfil,
 	.botao_lupa,
 	.botao_pessoas,
 	.botao_edit,
