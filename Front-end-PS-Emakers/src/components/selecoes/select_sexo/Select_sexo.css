@@ -1,38 +1,38 @@
 select {
-  cursor: pointer;
-  font-weight: 500;
-  appearance: none;
-  background-image: url(../../../public/imagens/img_seta.png);
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: 90%;
-  width: 100%;
-  height: 50px;
-  border: none;
-  padding-left: 15px;
-  font-size: 14px;
-  background-color: #efefef;
-  color: #5e2075;
-  border-style: none;
-  border-radius: 35px;
-  box-shadow: 0px 3.5px 3.5px #00000056;
-  transition: 0.5s;
-  transform: scale(1);
+	cursor: pointer;
+	font-weight: 500;
+	appearance: none;
+	background-image: url(../../../public/images/img_seta.png);
+	background-size: 15px;
+	background-repeat: no-repeat;
+	background-position: 90%;
+	width: 100%;
+	height: 50px;
+	border: none;
+	padding-left: 15px;
+	font-size: 14px;
+	background-color: #efefef;
+	color: #5e2075;
+	border-style: none;
+	border-radius: 35px;
+	box-shadow: 0px 3.5px 3.5px #00000056;
+	transition: 0.5s;
+	transform: scale(1);
 }
 select:focus {
-  background-color: lightgray;
-  border: none;
-  outline: none;
+	background-color: lightgray;
+	border: none;
+	outline: none;
 }
 select:hover {
-  background-color: #e0e0e0;
-  transition: 1s;
-  transform: scale(1.05);
+	background-color: #e0e0e0;
+	transition: 1s;
+	transform: scale(1.05);
 }
 
 @media screen and (max-width: 850px) {
-  select {
-    text-indent: 10px;
-    height: 40px;
-  }
+	select {
+		text-indent: 10px;
+		height: 40px;
+	}
 }

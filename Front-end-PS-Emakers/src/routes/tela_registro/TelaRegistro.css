@@ -1,4 +1,55 @@
 /* Confing da tela inteira*/
+.sucesso-msg {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	gap: 5vh;
+	.mensagem_sucesso {
+		margin: 0 0;
+		font-size: 30px;
+	}
+	.pontos {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		height: 10px;
+		.ponto_1 {
+			width: 10px;
+			height: 100%;
+			border-radius: 50%;
+			background-color: rgb(41, 41, 41);
+			animation: pre_carregamento 0.6s ease-in-out alternate infinite;
+		}
+		.ponto_2 {
+			width: 10px;
+			height: 100%;
+			border-radius: 50%;
+			background-color: rgb(41, 41, 41);
+			animation: pre_carregamento 0.6s ease-in-out alternate 0.2s infinite;
+		}
+		.ponto_3 {
+			width: 10px;
+			height: 100%;
+			border-radius: 50%;
+			background-color: rgb(41, 41, 41);
+			animation: pre_carregamento 0.6s ease-in-out alternate 0.4s infinite;
+		}
+	}
+}
+
+@keyframes pre_carregamento {
+	100% {
+		transform: scale(2);
+	}
+}
+
+/* Confing da tela inteira*/
+/* Confing da tela inteira*/
 .tela_registro {
 	display: flex;
 	flex-direction: row;
@@ -29,6 +80,19 @@
 	span {
 		padding-left: 1vw;
 	}
+}
+.conf_senha {
+	display: flex;
+	flex-direction: column;
+}
+.erro {
+	display: none;
+}
+.erro_visivel {
+	color: red;
+	font-weight: 400;
+	font-size: 15px;
+	margin-bottom: 5px;
 }
 .conjunto_perfil {
 	display: flex;
@@ -62,8 +126,6 @@
 	width: 64%;
 }
 .link {
-	margin-top: 5px;
-	margin-bottom: 5px;
 	text-decoration: none;
 }
 /* Confing do bloco registro*/
@@ -148,7 +210,6 @@
 		width: 100%;
 	}
 	.completar_acao {
-		margin-top: 1vh;
 		font-size: 16px;
 		font-weight: 500;
 		width: 64%;

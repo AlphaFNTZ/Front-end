@@ -1,11 +1,11 @@
-.menu,
+/*.menu,
 .pesquisar,
 .amigos,
 .editUsuario,
 .editPerfil,
 .editCapa {
 	display: none;
-}
+}*/
 .menu {
 	backdrop-filter: blur(10px);
 	position: absolute;

@@ -2,8 +2,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	align-self: center;
 	height: 50px;
-	width: 40%;
+	width: 20vw;
+	margin-top: 20px;
 	button {
 		background-color: #5e2075;
 		font-size: 20px;
@@ -36,8 +38,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	align-self: center;
 	height: 50px;
-	width: 70%;
+	width: 20vw;
 	button {
 		background-color: #fe690e;
 		font-size: 20px;
@@ -71,8 +74,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	align-self: center;
 	height: 50px;
-	width: 70%;
+	width: 20vw;
+	margin-top: 20px;
 	button {
 		background-color: #5e2075;
 		font-size: 20px;
@@ -106,6 +111,7 @@
 	.pag_perfil {
 		text-indent: 10px;
 		height: 40px;
+		width: 80%;
 		h1 {
 			font-size: 16px;
 		}
@@ -113,6 +119,7 @@
 	.pag_registro {
 		text-indent: 10px;
 		height: 40px;
+		width: 80%;
 		h1 {
 			font-size: 16px;
 		}
@@ -120,6 +127,7 @@
 	.pag_login {
 		text-indent: 10px;
 		height: 40px;
+		width: 100%;
 		h1 {
 			font-size: 16px;
 		}
