@@ -53,18 +53,6 @@
 		padding-left: 1vw;
 	}
 }
-.erroMsg {
-	position: relative;
-	display: flex;
-	align-items: center;
-	align-self: center;
-	text-align: center;
-	justify-content: center;
-	margin: 0;
-}
-.off {
-	display: none;
-}
 /* Confing do bloco registro*/
 /* Confing do bloco imagem*/
 .lado_foto {

@@ -1,6 +1,7 @@
 import { React, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./TelaLogin.css";
+import gif from "../../assets/gif_1.gif";
 import Logo from "../../../public/images/img_logo1.png";
 import Input_email from "../../components/inputs/input_email/Input_email";
 import Input_senha from "../../components/inputs/input_senha/Input_senha";
@@ -11,19 +12,13 @@ import axios from "axios";
 const TelaLogin = () => {
 	const [email, setEmail] = useState("");
 	const [senha, setSenha] = useState("");
-	const [erroMsg, setErroMsg] = useState("");
 	const [sucessoMsg, setSucessoMsg] = useState(false);
 	const emailRef = useRef();
-	const erroRef = useRef();
 	const navigate = useNavigate();
 
 	useEffect(() => {
 		emailRef.current.focus();
 	}, []);
-
-	useEffect(() => {
-		setErroMsg("");
-	}, [email, senha]);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -49,11 +44,22 @@ const TelaLogin = () => {
 			setTimeout(() => {
 				// animação de login
 				navigate("/perfil");
-			}, 1000);
+			}, 1500);
 		} catch (error) {
-			setErroMsg("Erro ao realizar o cadastro. Tente novamente.");
+			if (error.response && error.response.status === 400) {
+				setSucessoMsg("Dados inválidos. Por favor, tente novamente.");
+				setTimeout(() => {
+					// animação de login
+					window.location.reload();
+				}, 2000);
+			} else {
+				setSucessoMsg("Erro ao realizar o login. Tente novamente mais tarde.");
+				setTimeout(() => {
+					// animação de login
+					window.location.reload();
+				}, 2000);
+			}
 		}
-
 		setEmail("");
 		setSenha("");
 	};
@@ -66,11 +72,14 @@ const TelaLogin = () => {
 						<img src={Logo} />
 					</div>
 					<h1 className="mensagem_sucesso">{sucessoMsg}</h1>
-					<nav className="pontos">
+					{/*<nav className="pontos">
 						<div className="ponto_1"></div>
 						<div className="ponto_2"></div>
 						<div className="ponto_3"></div>
-					</nav>
+					</nav>*/}
+					<div className="gif">
+						<img src={gif} />
+					</div>
 				</div>
 			) : (
 				<div className="tela_login">
@@ -82,12 +91,6 @@ const TelaLogin = () => {
 						<div className="bloco_login">
 							<h1 className="titulo_login"> Entre em sua conta </h1>
 							<form className="conjunto_inputs1" onSubmit={handleSubmit}>
-								<p
-									ref={erroRef}
-									className={erroMsg ? "erroMsg" : "off"}
-									aria-live="assertive">
-									{erroMsg}
-								</p>
 								<div className="e-mail1">
 									<span>E-mail</span>
 									<Input_email

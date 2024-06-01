@@ -3,6 +3,7 @@ import "./TelaRegistro.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { BiSolidErrorAlt } from "react-icons/bi";
+import gif from "../../assets/gif_1.gif";
 import Logo from "../../../public/images/img_logo1.png";
 import Input_text from "../../components/inputs/input_text/Input_text";
 import Input_email from "../../components/inputs/input_email/Input_email";
@@ -19,12 +20,10 @@ const TelaRegistro = () => {
 	const [confSenha, setConfSenha] = useState("");
 	const [sexo, setSexo] = useState("");
 	const [foto, setFoto] = useState(null);
-	const [erroMsg, setErroMsg] = useState("");
 	const [sucessoMsg, setSucessoMsg] = useState(false);
 	const [senhaIgual, setSenhaIgual] = useState(true);
 	const [nomeArquivo, setNomeArquivo] = useState("");
 	const emailRef = useRef();
-	const erroRef = useRef();
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -34,10 +33,6 @@ const TelaRegistro = () => {
 	useEffect(() => {
 		setSenhaIgual(senha === confSenha);
 	}, [senha, confSenha]);
-
-	useEffect(() => {
-		setErroMsg("");
-	}, [email, senha]);
 
 	const [validacao, setValidacao] = useState({
 		caso: false,
@@ -91,11 +86,24 @@ const TelaRegistro = () => {
 			setSucessoMsg("Cadastro realizado com sucesso!");
 			setTimeout(() => {
 				navigate("/");
-			}, 1000); // Redireciona após 1 segundos
+			}, 2000); // Redireciona após 1 segundos
 		} catch (error) {
-			setErroMsg("Erro ao realizar o cadastro. Tente novamente.");
+			if (error.response && error.response.status === 400) {
+				setSucessoMsg("Aconteceu algum erro. Por favor, tente novamente.");
+				setTimeout(() => {
+					// animação de login
+					window.location.reload();
+				}, 2000);
+			} else {
+				setSucessoMsg(
+					"Erro ao realizar o cadastro. Tente novamente mais tarde."
+				);
+				setTimeout(() => {
+					// animação de login
+					window.location.reload();
+				}, 2000);
+			}
 		}
-
 		setNome("");
 		setEmail("");
 		setSenha("");
@@ -123,11 +131,9 @@ const TelaRegistro = () => {
 						<img src={Logo} />
 					</div>
 					<h1 className="mensagem_sucesso">{sucessoMsg}</h1>
-					<nav className="pontos">
-						<div className="ponto_1"></div>
-						<div className="ponto_2"></div>
-						<div className="ponto_3"></div>
-					</nav>
+					<div className="gif">
+						<img src={gif} />
+					</div>
 				</div>
 			) : (
 				<div className="tela_registro">
