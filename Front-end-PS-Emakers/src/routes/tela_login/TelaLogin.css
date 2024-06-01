@@ -47,7 +47,7 @@
 	font-size: 20px;
 	font-weight: 500;
 	width: 64%;
-	margin: 2%;
+	margin: 1vh;
 	gap: 2vh;
 	span {
 		padding-left: 1vw;
@@ -85,11 +85,13 @@
 }
 /* Confing do bloco imagem*/
 @media screen and (max-width: 850px) {
+	/* Mobile */
 	/* Confing da tela*/
 	.tela_login {
 		flex-direction: column;
 		height: 100vh;
 	}
+	/* Confing da tela*/
 	/* Confing do bloco registro*/
 	.lado_login {
 		width: 100vw;
@@ -143,4 +145,5 @@
 		font-weight: 400;
 	}
 	/* Confing do bloco imagem*/
+	/* Mobile */
 }

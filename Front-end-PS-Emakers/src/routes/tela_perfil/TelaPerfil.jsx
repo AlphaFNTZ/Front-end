@@ -1,6 +1,8 @@
+// Import do CSS da tela e as fuções
 import "./TelaPerfil.css";
 import { React, useState } from "react";
-/* Fotos */
+
+// Import das fotos
 import Foto_perfil from "../../../public/images/img_perfil.png";
 import Logo1 from "../../../public/images/img_logo2.png";
 import Foto1 from "../../../public/images/foto_1.png";
@@ -13,16 +15,15 @@ import Foto7 from "../../../public/images/foto_7.png";
 import Foto8 from "../../../public/images/foto_8.png";
 import Foto9 from "../../../public/images/foto_9.png";
 import Foto10 from "../../../public/images/foto_10.png";
-/* Fotos */
-/* Componentes */
+
+// Import dos componentes
 import Botao from "../../components/botoes/botao/Botao";
 import Barra from "../../components/barra/Barras";
 import Menu_base from "../../components/menus/menu_base/Menu_base";
 import Fundo_foto from "../../components/fundo_foto/Fundo_foto";
-/* Componentes */
 
 function TelaPerfil() {
-	/* Um "for" para fotos*/
+	// Um "for" para as fotos
 	const fotos = [
 		{ foto: Foto1, onClick: () => mudarFotoPerfil(Foto1) },
 		{ foto: Foto2, onClick: () => mudarFotoPerfil(Foto2) },
@@ -35,8 +36,8 @@ function TelaPerfil() {
 		{ foto: Foto9, onClick: () => mudarFotoPerfil(Foto9) },
 		{ foto: Foto10, onClick: () => mudarFotoPerfil(Foto10) },
 	];
-	/* Um "for" para fotos*/
-	/* Variaveis e funções */
+
+	// Criação das variaveis
 	const [telaVisivel, setTelaVisivel] = useState(false);
 	const [fotoPerfil, setFotoPerfil] = useState(Foto_perfil);
 	const [menuVisivel, setMenuVisivel] = useState(false);
@@ -49,31 +50,45 @@ function TelaPerfil() {
 	const [idade, setIdade] = useState("Idade");
 	const [bio, setBio] = useState("Conte mais para nós sobre você");
 
+	// Funçao para controlar a visibilidade da aba menu
 	const toggleMenu = () => {
 		setMenuVisivel(!menuVisivel);
 	};
+
+	// Funçao para controlar a visibilidade da aba amigos
 	const toggleAmigos = () => {
 		setAmigosVisivel(!amigosVisivel);
 	};
+
+	// Funçao para controlar a visibilidade da aba perfil
 	const toggleEditUsuario = () => {
 		setPerfilVisivel(!perfilVisivel);
 	};
+
+	// Funçao para controlar a visibilidade da aba de pequisar amigos
 	const togglePesq = () => {
 		setPesqVisivel(!pesqVisivel);
 	};
+
+	// Funçao para controlar a visibilidade da aba de editar perfil
 	const toggleEditPerfil = () => {
 		setEditPerfilVisivel(!editPerfilVisivel);
 	};
+
+	// Funçao para controlar a visibilidade da aba de editar capa
 	const toggleEditCapa = () => {
 		setEditCapaVisivel(!editCapaVisivel);
 	};
+
+	// Funçao para controlar a visibilidade da aba de mudar foto de perfil
 	const mudarFotoPerfil = (novaFoto) => {
 		setFotoPerfil(novaFoto);
 	};
-	/* Variaveis e funções */
+
 	return (
 		<div className="tela_inteira">
 			{/* As telas dos menus */}
+			{/* Aba do menu hamburguer */}
 			<Menu_base
 				tipo="menu"
 				funcao={menuVisivel}
@@ -82,8 +97,11 @@ function TelaPerfil() {
 				toggleUsuario={toggleEditUsuario}
 				toggleAmigos={toggleAmigos}
 			/>
+			{/* Aba de pesquisar amigos */}
 			<Menu_base tipo="pesquisar" funcao={pesqVisivel} toggle={togglePesq} />
+			{/* Aba de lista de amigos */}
 			<Menu_base tipo="amigos" funcao={amigosVisivel} toggle={toggleAmigos} />
+			{/* Aba de editar o perfil */}
 			<Menu_base
 				tipo="editUsuario"
 				funcao={perfilVisivel}
@@ -92,18 +110,20 @@ function TelaPerfil() {
 				onChange2={(e) => setIdade(e.target.value)}
 				onChange3={(e) => setBio(e.target.value)}
 			/>
+			{/* Aba de editar a foto perfil*/}
 			<Menu_base
 				tipo="editPerfil"
 				funcao={editPerfilVisivel}
 				toggle={toggleEditPerfil}
 				fotos={fotos}
 			/>
+			{/* Aba de editar a foto de capa*/}
 			<Menu_base
 				tipo="editCapa"
 				funcao={editCapaVisivel}
 				toggle={toggleEditCapa}
 			/>
-			{/* As telas dos menus */}
+			{/* Tela de perfil */}
 			<div className="parte_cima">
 				<div className="logo">
 					<img src={Logo1} />

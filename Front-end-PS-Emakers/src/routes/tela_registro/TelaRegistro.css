@@ -1,4 +1,4 @@
-/* Confing da tela inteira*/
+/* Confing da tela de carregamento */
 .sucesso-msg {
 	display: flex;
 	flex-direction: column;
@@ -30,13 +30,11 @@
 		width: auto;
 	}
 }
-
-/* Confing da tela inteira*/
+/* Confing da tela de carregamento */
 /* Confing da tela inteira*/
 .tela_registro {
 	display: flex;
 	flex-direction: row;
-	width: 100vw;
 }
 /* Confing da tela inteira*/
 /* Confing do bloco registro*/
@@ -191,6 +189,7 @@
 }
 /* Confing do bloco imagem*/
 @media screen and (max-width: 850px) {
+	/* Mobile */
 	/* Confing da tela*/
 	.tela_registro {
 		flex-direction: column-reverse;
@@ -259,4 +258,5 @@
 		}
 	}
 	/* Confing do bloco imagem*/
+	/* Mobile */
 }

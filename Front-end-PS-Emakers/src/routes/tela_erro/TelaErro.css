@@ -1,3 +1,4 @@
+/* Tela inteira */
 .tela_erro {
 	display: flex;
 	flex-direction: column;
@@ -8,10 +9,11 @@
 	height: 100vh;
 	background-color: rgb(217, 217, 217);
 }
-
+/* Tela inteira */
+/* Config das imagens e a escrita */
 .div_logo_erro img,
 .img_erro_container img {
-	width: auto; /* Ajuste o tamanho conforme necessário */
+	width: auto;
 }
 .img_erro_container:hover {
 	transition: 0.5s;
@@ -66,9 +68,12 @@ h1 {
 .redirecionamento:hover {
 	text-decoration: none;
 }
+/* Config das imagens e a escrita */
 
 @media screen and (max-width: 850px) {
+	/* Mobile */
 	img {
 		height: 200px;
 	}
+	/* Mobile */
 }
