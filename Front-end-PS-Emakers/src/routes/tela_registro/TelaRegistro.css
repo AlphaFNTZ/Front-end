@@ -4,9 +4,20 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	width: 100vw;
 	height: 100vh;
 	gap: 5vh;
+	.div_logo_sucesso {
+		top: 20px;
+		position: fixed;
+		display: flex;
+		width: auto;
+		img {
+			width: 350px;
+			height: 110px;
+		}
+	}
 	.mensagem_sucesso {
 		margin: 0 0;
 		font-size: 30px;
@@ -85,14 +96,52 @@
 	display: flex;
 	flex-direction: column;
 }
-.erro {
+.erro_ {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: red;
+	margin-bottom: 5px;
+	word-break: break-word;
+	span {
+		padding-left: 0.5vw;
+		font-size: 15px;
+		font-weight: 400;
+	}
+	svg {
+		padding-top: 2px;
+		font-size: 20px;
+	}
+}
+.erro_nao_visivel {
 	display: none;
 }
-.erro_visivel {
+.verificacao_senha {
+	display: flex;
+	flex-direction: column;
 	color: red;
 	font-weight: 400;
 	font-size: 15px;
 	margin-bottom: 5px;
+	word-break: break-word;
+	span {
+		padding-left: 0.5vw;
+	}
+	.numeros,
+	.caracteres,
+	.maiscuscula_e_minuscula {
+		display: flex;
+		align-items: center;
+		> svg {
+			padding-top: 2px;
+			font-size: 20px;
+		}
+	}
+	.numeros_visivel,
+	.caracteres_visivel,
+	.maiscuscula_e_minuscula_visivel {
+		display: none;
+	}
 }
 .conjunto_perfil {
 	display: flex;
@@ -115,6 +164,10 @@
 	display: flex;
 	flex-direction: column;
 	width: 50%;
+}
+.nome_arquivo {
+	text-align: center;
+	font-size: 10px;
 }
 .completar_acao {
 	display: flex;

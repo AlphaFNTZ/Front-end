@@ -2,6 +2,8 @@ import { React, useEffect, useRef, useState } from "react";
 import "./TelaRegistro.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { BiSolidErrorAlt } from "react-icons/bi";
+import Logo from "../../../public/images/img_logo1.png";
 import Input_text from "../../components/inputs/input_text/Input_text";
 import Input_email from "../../components/inputs/input_email/Input_email";
 import Input_senha from "../../components/inputs/input_senha/Input_senha";
@@ -19,7 +21,8 @@ const TelaRegistro = () => {
 	const [foto, setFoto] = useState(null);
 	const [erroMsg, setErroMsg] = useState("");
 	const [sucessoMsg, setSucessoMsg] = useState(false);
-	const [senhaIgual, setSenhaIgual] = useState(false);
+	const [senhaIgual, setSenhaIgual] = useState(true);
+	const [nomeArquivo, setNomeArquivo] = useState("");
 	const emailRef = useRef();
 	const erroRef = useRef();
 	const navigate = useNavigate();
@@ -29,17 +32,41 @@ const TelaRegistro = () => {
 	}, []);
 
 	useEffect(() => {
+		setSenhaIgual(senha === confSenha);
+	}, [senha, confSenha]);
+
+	useEffect(() => {
 		setErroMsg("");
 	}, [email, senha]);
 
-	const handleSubmit = async (e) => {
-		/*if (senha !== emailConf) {
-			setErroMsg("As senhas são iguais");
-			console.log("Deu ruim nego");
-			return;
-		}*/
+	const [validacao, setValidacao] = useState({
+		caso: false,
+		numero: false,
+		tamanho: false,
+	});
 
+	const senhaModelo = (senha) => {
+		const regexMaisculoCaso = RegExp(/^(?=.*[A-Z]).+$/);
+		const regexMinusuloCaso = RegExp(/^(?=.*[a-z]).+$/);
+		const regexNumero = RegExp(/^(?=.*[0-9]).+$/);
+		const tamanho = senha.length >= 6;
+		setValidacao({
+			caso: regexMaisculoCaso.test(senha) && regexMinusuloCaso.test(senha),
+			numero: regexNumero.test(senha),
+			tamanho: tamanho,
+		});
+	};
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
+		if (senha !== confSenha) {
+			setSenhaIgual(false);
+			return;
+		}
+		if (!validacao.caso || !validacao.numero || !validacao.tamanho) {
+			setErroMsg("A senha não atende aos requisitos.");
+			return;
+		}
 		setSucessoMsg(true);
 		// Cria o objeto JSON com os dados do formulário
 		const registroData = {
@@ -54,14 +81,17 @@ const TelaRegistro = () => {
 		console.log("Dados enviados:", jsonData);
 
 		try {
-			/*const response = await axios.post(	
-				"Endereço https",
-				loginData
-			);*/
+			/*const response = await axios.post(
+				"https://reqres.in/api/register",
+				registroData
+			);
+			localStorage.setItem("id", response.data.id);
+			localStorage.setItem("token", response.data.token);
+			console.log("Token e id:", response.data);*/
 			setSucessoMsg("Cadastro realizado com sucesso!");
 			setTimeout(() => {
 				navigate("/");
-			}, 1000); // Redireciona após 2 segundos
+			}, 1000); // Redireciona após 1 segundos
 		} catch (error) {
 			setErroMsg("Erro ao realizar o cadastro. Tente novamente.");
 		}
@@ -73,22 +103,25 @@ const TelaRegistro = () => {
 		setFoto("");
 	};
 
-	const handleSenhas = () => {
-		if (senha != confSenha) {
-			setSenhaIgual(true);
-			return;
-		}
+	const handleFileChange = (e) => {
+		const file = e.target.files[0];
+		setFoto(file); // Atualiza a variável de estado com o arquivo selecionado
+		setNomeArquivo(file.name); // Atualiza a variável de estado com o nome do arquivo
 	};
 
-	const handleFileChange = (e) => {
-		setFoto(e.target.files[0]); // Atualiza a variável de estado com o arquivo selecionado
-		console.log(e.target.files[0]); // Adiciona um console.log para verificar o arquivo
+	const handleSenhaChange = (e) => {
+		const senha = e.target.value;
+		setSenha(senha);
+		senhaModelo(senha);
 	};
 
 	return (
 		<>
 			{sucessoMsg ? (
 				<div className="sucesso-msg">
+					<div className="div_logo_sucesso">
+						<img src={Logo} />
+					</div>
 					<h1 className="mensagem_sucesso">{sucessoMsg}</h1>
 					<nav className="pontos">
 						<div className="ponto_1"></div>
@@ -118,19 +151,41 @@ const TelaRegistro = () => {
 							</div>
 							<div className="senha">
 								<span>Senha</span>
+								<div className="verificacao_senha">
+									<div
+										className={`caracteres${
+											validacao.tamanho ? "_visivel" : ""
+										}`}>
+										<BiSolidErrorAlt />
+										<span>6 caracteres</span>
+									</div>
+									<div
+										className={`numeros${validacao.numero ? "_visivel" : ""}`}>
+										<BiSolidErrorAlt />
+										<span>Números</span>
+									</div>
+									<div
+										className={`maiscuscula_e_minuscula${
+											validacao.caso ? "_visivel" : ""
+										}`}>
+										<BiSolidErrorAlt />
+										<span>Maiscúscula e minúscula</span>
+									</div>
+								</div>
 								<Input_senha
 									id="senha"
 									value={senha}
-									onChange={(e) => setSenha(e.target.value)}
+									onChange={handleSenhaChange}
 								/>
 							</div>
 							<div className="conf_senha">
 								<span>Confimar senha</span>
-								<span
-									className={`erro ${senhaIgual ? "visivel" : ""}`}
+								<div
+									className={`erro_${senhaIgual ? "nao_visivel" : ""}`}
 									senhaIgual={senhaIgual}>
-									mensagem de erro
-								</span>
+									<BiSolidErrorAlt />
+									<span>Confirmação de senha não confere.</span>
+								</div>
 								<Input_senha
 									id="confSenha"
 									value={confSenha}
@@ -148,6 +203,11 @@ const TelaRegistro = () => {
 								<div className="div_imagem">
 									<span>Imagem</span>
 									<Select_img onChange={handleFileChange} />
+									{nomeArquivo && (
+										<p className="nome_arquivo">
+											Arquivo selecionado: {nomeArquivo}
+										</p>
+									)}
 								</div>
 							</div>
 							<Botao_pag titulo="Registre-se" estilo="pag_login" />

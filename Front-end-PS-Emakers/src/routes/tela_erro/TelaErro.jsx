@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const TelaErro = () => {
 	return (
 		<div className="tela_erro">
-			<img src={img_erro} alt="" />
+			<img src={img_erro} />
 			<h1> Vish... Aparentemente há um erro aqui. </h1>
 			<Link className="redirecionamento" to="/">
 				Voltar para a página de login

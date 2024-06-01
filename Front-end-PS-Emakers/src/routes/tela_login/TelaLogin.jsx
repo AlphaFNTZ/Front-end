@@ -43,7 +43,7 @@ const TelaLogin = () => {
 				"https://reqres.in/api/login",
 				loginData
 			);
-			console.log("Dados enviados:", response.data);
+			console.log("Token:", response.data);
 			localStorage.setItem("token", response.data.token);
 			setSucessoMsg("Login realizado com sucesso!");
 			setTimeout(() => {
@@ -62,6 +62,9 @@ const TelaLogin = () => {
 		<>
 			{sucessoMsg ? (
 				<div className="sucesso-msg">
+					<div className="div_logo_sucesso">
+						<img src={Logo} />
+					</div>
 					<h1 className="mensagem_sucesso">{sucessoMsg}</h1>
 					<nav className="pontos">
 						<div className="ponto_1"></div>
