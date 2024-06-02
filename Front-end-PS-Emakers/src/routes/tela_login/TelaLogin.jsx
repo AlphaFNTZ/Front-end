@@ -38,7 +38,7 @@ const TelaLogin = () => {
 		// Cria um arq JSON já com os seus respectivos campos com os dados
 		const loginData = {
 			email: email,
-			password: senha,
+			senha: senha,
 		};
 
 		// Converte o arq JSON em uma string JSON
@@ -50,7 +50,8 @@ const TelaLogin = () => {
 		try {
 			// Executa uma requisição do tipo "post" ao back com os dados "loginData" como entrada
 			const response = await axios.post(
-				"https://reqres.in/api/login",
+				"http://localhost:8080/pessoa/login",
+				/*"https://reqres.in/api/login",*/
 				loginData
 			);
 

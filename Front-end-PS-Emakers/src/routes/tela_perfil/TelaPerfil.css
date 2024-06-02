@@ -117,11 +117,6 @@
 .parte_fotos.visivel {
 	display: none;
 }
-.barra_foto {
-	display: flex;
-	align-self: center;
-	width: 80%;
-}
 .fotos {
 	display: grid;
 	overflow-y: auto;
@@ -194,11 +189,6 @@
 	}
 	.editar_capa {
 		display: none;
-	}
-	.barra_foto {
-		position: relative;
-		top: -100px;
-		width: 90%;
 	}
 	.fotos {
 		position: relative;

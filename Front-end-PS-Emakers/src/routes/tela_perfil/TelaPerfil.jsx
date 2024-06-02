@@ -165,7 +165,6 @@ function TelaPerfil() {
 				<div
 					className={`parte_fotos ${telaVisivel ? "visivel" : ""}`}
 					telaVisivel={telaVisivel}>
-					<div className="barra_foto">{/*<Barra local="inverso" />*/}</div>
 					<div className="fotos">
 						{fotos.map((item, index) => (
 							<Fundo_foto key={index} foto={item.foto} />

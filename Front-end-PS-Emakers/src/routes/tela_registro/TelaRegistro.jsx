@@ -3,6 +3,7 @@ import "./TelaRegistro.css";
 import { React, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 // Import do icon
 import { BiSolidErrorAlt } from "react-icons/bi";
@@ -71,26 +72,27 @@ const TelaRegistro = () => {
 		e.preventDefault();
 
 		// Função para não deixar o usuario registrar caso a "senha" e "confSenha" não esteja iguais
-		if (senha !== confSenha) {
+		/*if (senha !== confSenha) {
 			setSenhaIgual(false);
 			return;
-		}
+		}*/
 
 		// Função para não deixar o usuario registrar caso a "senha" não tenha comprido a triagem
-		if (!validacao.caso || !validacao.numero || !validacao.tamanho) {
+		/*if (!validacao.caso || !validacao.numero || !validacao.tamanho) {
 			setErroMsg("A senha não atende aos requisitos.");
 			return;
-		}
+		}*/
 
 		// Define o sucessoMsg como "true"
 		setSucessoMsg(true);
 
 		// Cria um arq JSON já com os seus respectivos campos com os dados
 		const registroData = {
-			nome: nome,
+			nome_pessoa: nome,
+			cep: confSenha,
 			email: email,
 			senha: senha,
-			sexo: sexo,
+			/*sexo: sexo,*/
 		};
 
 		// Converte o objeto JSON em uma string JSON
@@ -101,14 +103,12 @@ const TelaRegistro = () => {
 		// Executa o envio para o back e captura, caso tenha, o erro retornado (catch)
 		try {
 			// Executa uma requisição do tipo "post" ao back com os dados "registroData" como entrada
-			/*const response = await axios.post(
-				"https://reqres.in/api/register",
+			const response = await axios.post(
+				"http://localhost:8080/pessoa/registro",
 				registroData
 			);
-			localStorage.setItem("id", response.data.id);
-			localStorage.setItem("token", response.data.token);
-			console.log("Token e id:", response.data);*/
-
+			console.log("Dados:", response.data);
+			localStorage.setItem("dados", response.data.dados);
 			// Define uma mensagem de sucesso
 			setSucessoMsg("Cadastro realizado com sucesso!");
 
@@ -135,7 +135,7 @@ const TelaRegistro = () => {
 				setTimeout(() => {
 					// Dá um reload na pagina de registro
 					window.location.reload();
-				}, 2000);
+				}, 200000);
 			}
 		}
 
