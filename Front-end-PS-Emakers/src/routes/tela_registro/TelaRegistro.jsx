@@ -68,20 +68,20 @@ const TelaRegistro = () => {
 	};
 
 	const handleSubmit = async (e) => {
-		// Desativa o comportamento padrão (reload da pagina)
+		/*// Desativa o comportamento padrão (reload da pagina)
 		e.preventDefault();
 
 		// Função para não deixar o usuario registrar caso a "senha" e "confSenha" não esteja iguais
-		/*if (senha !== confSenha) {
+		if (senha !== confSenha) {
 			setSenhaIgual(false);
 			return;
-		}*/
+		}
 
 		// Função para não deixar o usuario registrar caso a "senha" não tenha comprido a triagem
-		/*if (!validacao.caso || !validacao.numero || !validacao.tamanho) {
+		if (!validacao.caso || !validacao.numero || !validacao.tamanho) {
 			setErroMsg("A senha não atende aos requisitos.");
 			return;
-		}*/
+		}
 
 		// Define o sucessoMsg como "true"
 		setSucessoMsg(true);
@@ -92,7 +92,7 @@ const TelaRegistro = () => {
 			cep: confSenha,
 			email: email,
 			senha: senha,
-			/*sexo: sexo,*/
+			sexo: sexo,
 		};
 
 		// Converte o objeto JSON em uma string JSON
@@ -144,7 +144,7 @@ const TelaRegistro = () => {
 		setEmail("");
 		setSenha("");
 		setSexo("");
-		setFoto("");
+		setFoto("");*/
 	};
 
 	// Função de envio do arquivo de entrada do input de imagem

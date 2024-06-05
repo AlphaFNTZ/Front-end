@@ -29,7 +29,7 @@ const TelaLogin = () => {
 
 	// Função para criar os dados em formato JSON a serem enviados para o back
 	const handleSubmit = async (e) => {
-		// Desativa o comportamento padrão (reload da pagina)
+		/*// Desativa o comportamento padrão (reload da pagina)
 		e.preventDefault();
 
 		// Define o sucessoMsg como "true"
@@ -49,11 +49,7 @@ const TelaLogin = () => {
 		// Executa o envio para o back e captura, caso tenha, o erro retornado (catch)
 		try {
 			// Executa uma requisição do tipo "post" ao back com os dados "loginData" como entrada
-			const response = await axios.post(
-				"http://localhost:8080/pessoa/login",
-				/*"https://reqres.in/api/login",*/
-				loginData
-			);
+			const response = await axios.post("Endereço da API", loginData);
 
 			console.log("Token:", response.data);
 
@@ -89,7 +85,7 @@ const TelaLogin = () => {
 		}
 		// Limpa as variaveis de email e senha
 		setEmail("");
-		setSenha("");
+		setSenha("");*/
 	};
 
 	return (
