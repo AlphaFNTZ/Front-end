@@ -1,10 +1,12 @@
 import "./Edit_capa.css";
 import { React, useState } from "react";
 
-const Edit_capa = () => {
+const Edit_capa = ({ fotos_capa }) => {
 	return (
 		<div className="conteudo_edit_capa">
-			<h1>Não há foto disponivel para mudança</h1>
+			{fotos_capa.map((item, index) => (
+				<img key={index} src={item.foto} onClick={item.onClick} />
+			))}
 		</div>
 	);
 };

@@ -6,13 +6,17 @@
 .editCapa {
 	display: none;
 }*/
+.corpo {
+	display: flex;
+	flex-direction: row-reverse;
+}
 .menu {
 	backdrop-filter: blur(10px);
 	position: absolute;
-	border-radius: 30px;
-	top: 10px;
-	left: 50%;
-	width: 49vw;
+	border-radius: 20px;
+	top: 1.5vh;
+	right: 1.5vw;
+	width: 0;
 	height: 98vh;
 	z-index: 5;
 	display: flex;
@@ -21,17 +25,18 @@
 	justify-content: center;
 	background: rgba(92, 61, 40, 0.475);
 	opacity: 0;
-	transition: opacity 300ms;
+	transition: opacity 300ms, width 300ms;
 	pointer-events: none;
 	.voltar {
 		position: absolute;
-		top: 1vh;
-		right: 1vw;
+		top: 0.5vh;
+		right: 0.5vw;
 	}
 }
 .menu.visivel {
 	opacity: 1;
-	transition: opacity 300ms;
+	width: 49vw;
+	transition: opacity 300ms, width 300ms;
 	pointer-events: auto;
 }
 .pesquisar {

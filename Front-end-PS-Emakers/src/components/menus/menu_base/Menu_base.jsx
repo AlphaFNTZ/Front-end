@@ -13,6 +13,7 @@ const Menu_base = ({
 	tipo,
 	funcao,
 	fotos,
+	fotos_capa,
 	onChange1,
 	onChange2,
 	onChange3,
@@ -21,7 +22,7 @@ const Menu_base = ({
 	toggleAmigos,
 }) => {
 	return (
-		<div>
+		<div className="corpo">
 			{tipo === "menu" && (
 				<div className={`${tipo} ${funcao ? "visivel" : ""}`} funcao={funcao}>
 					<div className="voltar" onClick={toggle}>
@@ -77,7 +78,7 @@ const Menu_base = ({
 					<div className="voltar" onClick={toggle}>
 						<Botao tipo="tipo_voltar" />
 					</div>
-					<Edit_capa />
+					<Edit_capa fotos_capa={fotos_capa} />
 				</div>
 			)}
 		</div>

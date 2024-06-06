@@ -15,6 +15,12 @@ import Foto7 from "../../../public/images/foto_7.png";
 import Foto8 from "../../../public/images/foto_8.png";
 import Foto9 from "../../../public/images/foto_9.png";
 import Foto10 from "../../../public/images/foto_10.png";
+import Foto_capa_dft from "../../../public/images/img_fundo_dft.png";
+import Foto_capa1 from "../../../public/images/img_fundo.png";
+import Foto_capa2 from "../../../public/images/img_fundo_1.png";
+import Foto_capa3 from "../../../public/images/img_fundo_2.png";
+import Foto_capa4 from "../../../public/images/img_fundo_3.png";
+import Foto_capa5 from "../../../public/images/img_fundo_4.png";
 
 // Import dos componentes
 import Botao from "../../components/botoes/botao/Botao";
@@ -37,6 +43,14 @@ function TelaPerfil() {
 		{ foto: Foto10, onClick: () => mudarFotoPerfil(Foto10) },
 	];
 
+	const fotos_capa = [
+		{ foto: Foto_capa1, onClick: () => changeBackgroundImage(Foto_capa1) },
+		{ foto: Foto_capa2, onClick: () => changeBackgroundImage(Foto_capa2) },
+		{ foto: Foto_capa3, onClick: () => changeBackgroundImage(Foto_capa3) },
+		{ foto: Foto_capa4, onClick: () => changeBackgroundImage(Foto_capa4) },
+		{ foto: Foto_capa5, onClick: () => changeBackgroundImage(Foto_capa5) },
+	];
+
 	// Criação das variaveis
 	const [telaVisivel, setTelaVisivel] = useState(false);
 	const [fotoPerfil, setFotoPerfil] = useState(Foto_perfil);
@@ -49,6 +63,14 @@ function TelaPerfil() {
 	const [nome, setNome] = useState("Nome do usuário");
 	const [idade, setIdade] = useState("Idade");
 	const [bio, setBio] = useState("Conte mais para nós sobre você");
+
+	const [backgroundImage, setBackgroundImage] = useState(
+		`url(${Foto_capa_dft})`
+	);
+
+	const changeBackgroundImage = (newImageUrl) => {
+		setBackgroundImage(`url(${newImageUrl})`);
+	};
 
 	// Funçao para controlar a visibilidade da aba menu
 	const toggleMenu = () => {
@@ -122,9 +144,10 @@ function TelaPerfil() {
 				tipo="editCapa"
 				funcao={editCapaVisivel}
 				toggle={toggleEditCapa}
+				fotos_capa={fotos_capa}
 			/>
 			{/* Tela de perfil */}
-			<div className="parte_cima">
+			<div className="parte_cima" style={{ backgroundImage }}>
 				<div className="logo">
 					<img src={Logo1} />
 				</div>

@@ -16,7 +16,6 @@
 	flex-direction: row;
 	width: 100vw;
 	height: 26%;
-	background-image: url(../../../public/images/img_fundo.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -188,7 +187,9 @@
 		font-size: 20px;
 	}
 	.editar_capa {
-		display: none;
+		position: relative;
+		top: -97%;
+		left: 40%;
 	}
 	.fotos {
 		position: relative;
