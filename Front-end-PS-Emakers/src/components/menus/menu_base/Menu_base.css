@@ -1,23 +1,19 @@
-/*.menu,
-.pesquisar,
-.amigos,
-.editUsuario,
-.editPerfil,
-.editCapa {
-	display: none;
-}*/
 .corpo {
 	display: flex;
 	flex-direction: row-reverse;
 }
-.menu {
+.menu,
+.pesquisar,
+.amigos,
+.editUsuario,
+.editCapa {
 	backdrop-filter: blur(10px);
-	position: absolute;
-	border-radius: 20px;
-	top: 1.5vh;
-	right: 1.5vw;
+	position: fixed;
+	border-radius: 30px;
+	top: 10px;
+	right: 1vw;
 	width: 0;
-	height: 98vh;
+	height: 98%;
 	z-index: 5;
 	display: flex;
 	flex-direction: column;
@@ -29,108 +25,29 @@
 	pointer-events: none;
 	.voltar {
 		position: absolute;
-		top: 0.5vh;
-		right: 0.5vw;
+		top: 1vh;
+		right: 1vw;
 	}
 }
-.menu.visivel {
+.menu.visivel,
+.pesquisar.visivel,
+.amigos.visivel,
+.editUsuario.visivel,
+.editCapa.visivel {
 	opacity: 1;
-	width: 49vw;
+	width: 48%;
 	transition: opacity 300ms, width 300ms;
 	pointer-events: auto;
 }
-.pesquisar {
-	backdrop-filter: blur(10px);
-	position: absolute;
-	border-radius: 30px;
-	top: 10px;
-	left: 50vw;
-	width: 49vw;
-	height: 98vh;
-	z-index: 5;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: rgba(92, 61, 40, 0.475);
-	opacity: 0;
-	transition: opacity 300ms;
-	pointer-events: none;
-	.voltar {
-		position: absolute;
-		top: 1vh;
-		right: 1vw;
-	}
-}
-.pesquisar.visivel {
-	opacity: 1;
-	transition: opacity 300ms;
-	pointer-events: auto;
-}
-.amigos {
-	backdrop-filter: blur(10px);
-	position: absolute;
-	border-radius: 30px;
-	top: 10px;
-	left: 50vw;
-	width: 49vw;
-	height: 98vh;
-	z-index: 5;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: rgba(92, 61, 40, 0.475);
-	opacity: 0;
-	transition: opacity 300ms;
-	pointer-events: none;
-	.voltar {
-		position: absolute;
-		top: 1vh;
-		right: 1vw;
-	}
-}
-.amigos.visivel {
-	opacity: 1;
-	transition: opacity 300ms;
-	pointer-events: auto;
-}
-.editUsuario {
-	backdrop-filter: blur(10px);
-	position: absolute;
-	border-radius: 30px;
-	top: 10px;
-	left: 50vw;
-	width: 49vw;
-	height: 98vh;
-	z-index: 5;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: rgba(92, 61, 40, 0.475);
-	opacity: 0;
-	transition: opacity 300ms;
-	pointer-events: none;
-	.voltar {
-		position: absolute;
-		top: 1vh;
-		right: 1vw;
-	}
-}
-.editUsuario.visivel {
-	opacity: 1;
-	transition: opacity 300ms;
-	pointer-events: auto;
-}
+
 .editPerfil {
 	backdrop-filter: blur(10px);
-	position: absolute;
+	position: fixed;
 	border-radius: 30px;
 	top: 10px;
 	left: 10px;
-	width: 49vw;
-	height: 98vh;
+	width: 0;
+	height: 98%;
 	z-index: 5;
 	display: flex;
 	flex-direction: column;
@@ -138,7 +55,7 @@
 	justify-content: center;
 	background: rgba(92, 61, 40, 0.475);
 	opacity: 0;
-	transition: opacity 300ms;
+	transition: opacity 300ms, width 300ms;
 	pointer-events: none;
 	.voltar {
 		position: absolute;
@@ -148,34 +65,7 @@
 }
 .editPerfil.visivel {
 	opacity: 1;
-	transition: opacity 300ms;
-	pointer-events: auto;
-}
-.editCapa {
-	backdrop-filter: blur(10px);
-	position: absolute;
-	border-radius: 30px;
-	top: 10px;
-	left: 50%;
-	width: 49%;
-	height: 98%;
-	z-index: 5;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: rgba(92, 61, 40, 0.475);
-	opacity: 0;
-	transition: opacity 300ms;
-	pointer-events: none;
-	.voltar {
-		position: absolute;
-		top: 1vh;
-		right: 1vw;
-	}
-}
-.editCapa.visivel {
-	opacity: 1;
-	transition: opacity 300ms;
+	width: 48%;
+	transition: opacity 300ms, width 300ms;
 	pointer-events: auto;
 }
