@@ -29,7 +29,7 @@ const TelaLogin = () => {
 
 	// Função para criar os dados em formato JSON a serem enviados para o back
 	const handleSubmit = async (e) => {
-		/*// Desativa o comportamento padrão (reload da pagina)
+		// Desativa o comportamento padrão (reload da pagina)
 		e.preventDefault();
 
 		// Define o sucessoMsg como "true"
@@ -85,7 +85,7 @@ const TelaLogin = () => {
 		}
 		// Limpa as variaveis de email e senha
 		setEmail("");
-		setSenha("");*/
+		setSenha("");
 	};
 
 	return (

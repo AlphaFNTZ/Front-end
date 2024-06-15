@@ -68,7 +68,7 @@ const TelaRegistro = () => {
 	};
 
 	const handleSubmit = async (e) => {
-		/*// Desativa o comportamento padrão (reload da pagina)
+		// Desativa o comportamento padrão (reload da pagina)
 		e.preventDefault();
 
 		// Função para não deixar o usuario registrar caso a "senha" e "confSenha" não esteja iguais
@@ -103,11 +103,10 @@ const TelaRegistro = () => {
 		// Executa o envio para o back e captura, caso tenha, o erro retornado (catch)
 		try {
 			// Executa uma requisição do tipo "post" ao back com os dados "registroData" como entrada
-			const response = await axios.post(
-				"http://localhost:8080/pessoa/registro",
-				registroData
-			);
+			const response = await axios.post("Endereço da api", registroData);
+
 			console.log("Dados:", response.data);
+
 			localStorage.setItem("dados", response.data.dados);
 			// Define uma mensagem de sucesso
 			setSucessoMsg("Cadastro realizado com sucesso!");
@@ -135,7 +134,7 @@ const TelaRegistro = () => {
 				setTimeout(() => {
 					// Dá um reload na pagina de registro
 					window.location.reload();
-				}, 200000);
+				}, 2000);
 			}
 		}
 
@@ -144,7 +143,7 @@ const TelaRegistro = () => {
 		setEmail("");
 		setSenha("");
 		setSexo("");
-		setFoto("");*/
+		setFoto("");
 	};
 
 	// Função de envio do arquivo de entrada do input de imagem
